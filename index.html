@@ -42,13 +42,14 @@
     }
 
     /* Links */
+
     .menu {
         width: 100%;
         background: black;
         color: white;
         text-align: center;
         letter-spacing: 3px;
-        padding: 15px 0;
+        padding: 25px 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -64,31 +65,114 @@
         background: transparent;
         color: white;
         font-family: inherit;
-        padding: 0;
-        margin: 0;
         font-size: 1rem;
         font-weight: 500;
         letter-spacing: 3px;
         margin: 0 10px;
-        transition: all .5s ease;
+        transition: all 0.5s ease;
     }
 
     .menu button:hover,
     .menu button.active {
         cursor: pointer;
         color: #D9832E;
-        font-size: inherit;
     }
 
-    @media (max-width: 1000px ) {
+    .hamburger {
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .menu-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-panel {
+        background-color: white;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 20px;
+        z-index: 9999;
+        box-shadow: -4px 0 8px rgba(0,0,0,0.2);
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-panel.show {
+        transform: translateX(0);
+    }
+
+    .close-btn {
+        font-size: 3em;
+        font-weight: bold;
+        color: black;
+        text-align: right;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 1000px) {
         .menu button {
-            font-size: .8rem;
+            font-size: 1rem;
         }
     }
 
-    @media (max-width: 800px ) {
+    @media (max-width: 800px) {
         .menu button {
             margin: 10px 10px;
+        }
+    }
+
+        @media (max-width: 600px) {
+        .hamburger {
+            display: block;
+            margin-left: 2rem;
+            font-size: 6rem;
+            color: black;
+        }
+
+        .menu {
+            flex-direction: column;
+            align-items: flex-end;
+            background-color: transparent;
+            padding: 15px;
+            color: black;
+            z-index: 500;
+        }
+
+        .menu-panel.show {
+            display: block;
+        }
+
+        .menu-buttons {
+            display: none; /* esconde versão desktop */
+        }
+
+        .menu-buttons-mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 15px;
+        }
+
+        .menu-buttons-mobile button {
+            border: none;
+            background-color: transparent;
+            color: black;
+            width: 100%;
+            text-align: right;
+            font-size: 1.2rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
         }
     }
 
@@ -110,14 +194,14 @@
     }
 
     .hero-background::before {
-        position: absolute;
         content: '';
+        position: absolute;
         z-index: -1;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, rgb(249 236 221) 20%, rgb(245 224 202) 50%, rgb(255 253 248 / 0%) 60%);
+        background: linear-gradient(90deg, rgb(249 236 221) 20%, rgb(245 224 202) 50%, rgba(255, 253, 248, 0) 60%);
     }
 
     .hero-content {
@@ -138,99 +222,74 @@
         object-fit: contain;
     }
 
+    .hero-title,
+    .hero-subtitle,
+    .hero-list {
+        font-family: 'Raleway', sans-serif;
+        color: #404040;
+        letter-spacing: 3px;
+        line-height: 1.4;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
     .hero-title {
-        font-family: 'Raleway';
-        font-size: 2.5em;
+        font-size: clamp(1.8rem, 2.5vw, 2.5em);
         letter-spacing: 6px;
         line-height: 1.2;
         font-weight: 400;
-        color: #404040;
         margin-bottom: 40px;
     }
 
     .hero-title .destaque {
         color: #D9832E;
         font-weight: 700;
-        font-size: inherit;
     }
 
     .hero-subtitle {
-        font-family: 'Raleway';
-        font-size: 1.5em;
-        letter-spacing: 3px;
-        line-height: 1.4;
-        font-weight: 500;
-        margin-bottom: 30px;
+        font-size: clamp(1rem, 1.5vw, 1.5em);
         max-width: 700px;
-        color: #404040;
+        font-weight: 500;
     }
 
     .hero-list {
-        font-size: 1.5em;
-        letter-spacing: 3px;
-        line-height: 1.4;
-        font-weight: 400;
-        color: #404040;
-        font-family: inherit;
+        font-size: clamp(1rem, 1.5vw, 1.5em);
     }
 
     .hero-list span {
         color: #D9832E;
         font-weight: 700;
-        font-size: inherit;
-        font-family: inherit;
     }
 
-    
     @media (max-width: 1900px) {
         .hero-background {
             background-image: url('https://i.postimg.cc/hjwTZ7sb/Banner.png');
         }
+
         .hero-subtitle {
             max-width: 500px;
         }
     }
 
     @media (max-width: 1400px) {
-        .hero-content .logo {
+        .logo {
             width: 300px;
             height: 200px;
-        }
-        .hero-title {
-            font-size: 2.5em;
-        }
-        .hero-subtitle {
-            font-size: 1rem;
-        }
-        .hero-list {
-            font-size: 1rem;
         }
     }
 
     @media (max-width: 1300px) {
         .hero-content {
-            width: 100%;
             max-width: 1000px;
         }
     }
 
     @media (max-width: 1100px) {
         .hero-content {
-            width: 100%;
-            max-width: none;
             margin-left: 3rem;
+            max-width: none;
         }
-        .hero-background {
-            background-size: cover;
-        }
-    }
 
-        @media (max-width: 1100px) {
-        .hero-content {
-            width: 100%;
-            max-width: none;
-            margin-left: 3rem;
-        }
         .hero-background {
             background-size: cover;
         }
@@ -241,29 +300,32 @@
             background-image: url('https://i.postimg.cc/8c23GcpL/Banner.png');
             background-position: center;
         }
+
         .hero-background::before {
-            background: linear-gradient(90deg, rgb(249 236 221) 0%, rgb(245 224 202) 30%, rgb(255 253 248 / 0%) 80%);
+            background: linear-gradient(90deg, rgb(249 236 221) 0%, rgb(245 224 202) 30%, rgba(255, 253, 248, 0) 80%);
         }
     }
 
     @media (max-width: 700px) {
         .hero-background {
-            margin-top: 100px;
             padding: 50px 0;
         }
-        .hero-content .logo {
-            width: 200px;
+
+        .logo {
+            width: 300px;
             height: 150px;
         }
+
         .hero-title {
-            font-size: 2em;
+            font-size: 2.5rem;
         }
+
         .hero-subtitle {
-            font-size: .8rem;
-            max-width: 300px;
+            font-size: 1.8rem
         }
+
         .hero-list {
-            font-size: .8rem;
+                font-size: 2rem
         }
     }
 
@@ -1705,13 +1767,28 @@
     }
     </style>
 <body>
-     <div class="menu">
-        <button id="scrollToAbout">MODELOS</button>
-        <button id="scrollToTech">LINHAS</button>
-        <button id="scrollToUnique">DIFERENCIAIS</button>
-        <button id="scrollToWhy">VESTIR UNICA</button>
-        <button id="scrollToTestimonial">DEPOIMENTOS</button>
-        <button id="scrollToDiscover">ATENDIMENTO</button>
+    <div class="menu">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="menu-buttons">
+            <button id="scrollToAbout">MODELOS</button>
+            <button id="scrollToTech">LINHAS</button>
+            <button id="scrollToUnique">DIFERENCIAIS</button>
+            <button id="scrollToWhy">VESTIR UNICA</button>
+            <button id="scrollToTestimonial">DEPOIMENTOS</button>
+            <button id="scrollToDiscover">ATENDIMENTO</button>
+        </div>
+    </div>
+
+    <div class="menu-panel" id="menuPanel">
+        <div class="close-btn" id="closeBtn">&times;</div>
+        <div class="menu-buttons-mobile">
+            <button id="scrollToAbout">MODELOS</button>
+            <button id="scrollToTech">LINHAS</button>
+            <button id="scrollToUnique">DIFERENCIAIS</button>
+            <button id="scrollToWhy">VESTIR UNICA</button>
+            <button id="scrollToTestimonial">DEPOIMENTOS</button>
+            <button id="scrollToDiscover">ATENDIMENTO</button>
+        </div>
     </div>
     <div class="hero-background">
         <div class="hero-content">
@@ -2410,75 +2487,111 @@
         </div>
     </footer> -->
     <script>
-        const clickTargetMap = {
-            scrollToAbout: ".about-title",
-            scrollToTech: ".tech-main-title",
-            scrollToUnique: ".unique-title",
-            scrollToWhy: ".why-title",
-            scrollToTestimonial: ".testimonials-main-title",
-            scrollToDiscover: ".discover-title"
+        document.addEventListener("DOMContentLoaded", () => {
+            const clickTargetMap = {
+                scrollToAbout: ".about-title",
+                scrollToTech: ".tech-main-title",
+                scrollToUnique: ".unique-title",
+                scrollToWhy: ".why-title",
+                scrollToTestimonial: ".testimonials-main-title",
+                scrollToDiscover: ".discover-title"
             };
 
             const spyTargetMap = {
-            scrollToAbout: ".about-section-background",
-            scrollToTech: ".tech-section-background",
-            scrollToUnique: ".unique-section-background",
-            scrollToWhy: ".why-section-background",
-            scrollToTestimonial: ".testimonials-section",
-            scrollToDiscover: ".discover-section"
+                scrollToAbout: ".about-section-background",
+                scrollToTech: ".tech-section-background",
+                scrollToUnique: ".unique-section-background",
+                scrollToWhy: ".why-section-background",
+                scrollToTestimonial: ".testimonials-section",
+                scrollToDiscover: ".discover-section"
             };
 
             const buttons = {};
             const spySections = [];
 
-            // Configurar os eventos de clique (scroll até o TÍTULO)
+            // Função para fechar menu mobile
+            function closeMenuPanel() {
+                document.getElementById('menuPanel')?.classList.remove('show');
+            }
+
+            // Scroll suave + armazena todos os botões com mesmo ID
             Object.entries(clickTargetMap).forEach(([buttonId, targetSelector]) => {
-            const button = document.getElementById(buttonId);
-            const target = document.querySelector(targetSelector);
+                const allButtons = document.querySelectorAll(`#${buttonId}`);
+                const target = document.querySelector(targetSelector);
 
-            if (button && target) {
-                buttons[buttonId] = button;
-                button.addEventListener("click", () => {
-                const offset = 100;
-                const top = target.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top, behavior: "smooth" });
-                });
-            }
+                if (target) {
+                    allButtons.forEach(button => {
+                        if (!buttons[buttonId]) {
+                            buttons[buttonId] = [];
+                        }
+                        buttons[buttonId].push(button);
+
+                        button.addEventListener("click", () => {
+                            const offset = 100;
+                            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                            window.scrollTo({ top, behavior: "smooth" });
+                            closeMenuPanel(); // fecha menu lateral se necessário
+                        });
+                    });
+                }
             });
 
-            // Configurar as seções para o scroll spy
+            // Scroll spy: prepara as seções observadas
             Object.entries(spyTargetMap).forEach(([buttonId, sectionSelector]) => {
-            const section = document.querySelector(sectionSelector);
-            if (section && buttons[buttonId]) {
-                spySections.push({ id: buttonId, element: section });
-            }
+                const section = document.querySelector(sectionSelector);
+                if (section && buttons[buttonId]) {
+                    spySections.push({ id: buttonId, element: section });
+                }
             });
 
-            // Scroll Spy – ativa o botão correspondente com base na posição da seção
+            // Aplica scroll spy dinamicamente com base no scroll
             window.addEventListener("scroll", () => {
-            const scrollPos = window.scrollY + 30;
-            let currentId = null;
+                const scrollPos = window.scrollY + 30;
+                let currentId = null;
 
-            for (let i = 0; i < spySections.length; i++) {
-                const { id, element } = spySections[i];
-                const offsetTop = element.offsetTop;
-                const offsetHeight = element.offsetHeight;
+                for (let i = 0; i < spySections.length; i++) {
+                    const { id, element } = spySections[i];
+                    const offsetTop = element.offsetTop;
+                    const offsetHeight = element.offsetHeight;
 
-                if (scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
-                currentId = id;
-                break;
+                    if (scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
+                        currentId = id;
+                        break;
+                    }
                 }
-            }
 
-            // Atualiza a classe "active" nos botões
-            Object.entries(buttons).forEach(([id, button]) => {
-                if (id === currentId) {
-                button.classList.add("active");
-                } else {
-                button.classList.remove("active");
+                Object.entries(buttons).forEach(([id, buttonList]) => {
+                    buttonList.forEach(button => {
+                        if (id === currentId) {
+                            button.classList.add("active");
+                        } else {
+                            button.classList.remove("active");
+                        }
+                    });
+                });
+            });
+
+            // Menu lateral (hamburger)
+            const hamburger = document.getElementById('hamburger');
+            const menuPanel = document.getElementById('menuPanel');
+            const closeBtn = document.getElementById('closeBtn');
+
+            hamburger?.addEventListener('click', () => {
+                menuPanel?.classList.toggle('show');
+            });
+
+            closeBtn?.addEventListener('click', () => {
+                closeMenuPanel();
+            });
+
+            document.addEventListener('click', (e) => {
+                const isClickInside = menuPanel?.contains(e.target);
+                const isClickHamburger = hamburger?.contains(e.target);
+                if (!isClickInside && !isClickHamburger) {
+                    closeMenuPanel();
                 }
             });
-            });
+        });
 
 
         // Change image based on mouse hover
