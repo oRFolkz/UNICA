@@ -12,7 +12,8 @@
     <meta name="robots" content="index, follow">
 
     <!-- Ícone da aba (opcional) -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+ <!--  <link rel="icon" href="https://i.postimg.cc/DwW9RnJX/UNICA-LOGOTIPO-AI-23-04-2.png" type="image/x-icon"> -->
+    <link rel="icon" href="https://i.postimg.cc/mD4Kc9dY/UNICA-LOGOTIPO-AI-23-03-1.png" type="image/x-icon">
     <style>
      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -139,9 +140,18 @@
     @media (max-width: 800px) {
         .hamburger {
             display: block;
-            margin-right: 2rem;
-            font-size: 3rem;
             color: #404040;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 2rem;
+            background-color: #d9842e7c;
+        }
+
+        .hamburger img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
         }
 
         .menu {
@@ -175,7 +185,8 @@
             width: 100%;
             text-align: right;
             font-size: 1.2rem;
-            border-bottom: 1px solid #ccc;
+            letter-spacing: 3px;
+            border-bottom: 1px solid #D9832E;
             padding-bottom: 20px;
         }
     }
@@ -1121,7 +1132,7 @@
 
     @media (max-width: 600px) {
         .unique-section-background {
-            padding: 80px 0;
+            padding: 50px 0;
             padding-left: 2rem;
         }
         .unique-title {
@@ -1536,20 +1547,17 @@
     }
 
     @media (max-width: 700px) {
-        .testimonial-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
         .testimonial-name-right {
-            text-align: start;
+            text-align: end;
         }
         .testimonial-info-right {
-            text-align: start;
+            text-align: end;
         }
         .testimonial-item-flex:nth-child(odd) {
             align-items: flex-start;
         }
         .testimonial-text-right {
-            text-align: start;
+            text-align: end;
         }
         .testimonial-text,
         .testimonial-text-right {
@@ -1583,7 +1591,6 @@
             justify-content: start;
             max-width: 90%;
             gap: 50px;
-            margin-left: 4rem;
         }
     }
 
@@ -1594,6 +1601,9 @@
         .testimonials-main-title {
             font-size: 1.5rem;
             margin-bottom: 50px;
+        }
+        .testimonial-image-placeholder1, .testimonial-image-placeholder2, .testimonial-image-placeholder3, .testimonial-image-placeholder4 {
+            min-width: 80px;
         }
     }
 
@@ -2012,7 +2022,8 @@
     </style>
 <body>
     <div class="menu">
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="hamburger" id="hamburger">
+            <img src="https://i.postimg.cc/mD4Kc9dY/UNICA-LOGOTIPO-AI-23-03-1.png" alt=""></div>
         <div class="menu-buttons">
             <button id="scrollToAbout">MODELOS</button>
             <button id="scrollToTech">LINHAS</button>
@@ -2022,7 +2033,6 @@
             <button id="scrollToDiscover">ATENDIMENTO</button>
         </div>
     </div>
-
     <div class="menu-panel" id="menuPanel">
         <div class="close-btn" id="closeBtn">&times;</div>
         <div class="menu-buttons-mobile">
