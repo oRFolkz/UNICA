@@ -8,7 +8,7 @@
 
     <!-- SEO básico -->
     <meta name="description" content="Landing page oficial da UNICA – conheça nossos modelos, linhas e diferenciais.">
-    <meta name="author" content="Seu Nome ou Agência">
+    <meta name="author" content="Nexgenius">
     <meta name="robots" content="index, follow">
 
     <!-- Ícone da aba (opcional) -->
@@ -140,7 +140,7 @@
         .hamburger {
             display: block;
             margin-right: 2rem;
-            font-size: 4rem;
+            font-size: 3rem;
             color: #404040;
         }
 
@@ -311,6 +311,23 @@
     }
 
     @media (max-width: 700px) {
+        .hero-content {
+            margin-left: 2rem;
+        }
+        .hero-title {
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+        .hero-subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            width: 90%;
+            color: #404040;
+        }
+        .hero-list {
+            font-size: 1rem;
+            color: #404040;
+        }
         .hero-background {
             padding: 50px 0;
         }
@@ -324,30 +341,8 @@
             margin-left: 0px;
             margin-top: 20px;
         }
-
-        @media (max-width: 450px) {
-            .hero-content {
-                margin-left: 2rem;
-            }
-            .hero-title {
-                font-size: 1.1em;
-                font-weight: 400;
-            }
-
-            .hero-subtitle {
-                font-size: .6rem;
-                letter-spacing: 2px;
-                width: 90%;
-                color: #404040;
-            }
-
-            .hero-list {
-                font-size: .7rem;
-                color: #404040;
-            }
-            .hero-background::before {
-                background: linear-gradient(100deg, rgb(249 236 221) 0%, rgb(245 224 202) 20%, rgba(255, 253, 248, 0) 100%);
-            }
+        .hero-background::before {
+            background: linear-gradient(100deg, rgb(249 236 221) 0%, rgb(245 224 202) 20%, rgba(255, 253, 248, 0) 100%);
         }
     }
 
@@ -530,57 +525,33 @@
     }
 
     @media (max-width: 700px) {
-        .product-title-left,
-        .product-title-right {
-            font-size: 1rem;
-            margin-bottom: 5px;
-        }
-        .product-description-left, 
-        .product-description-right {
-            padding: 0 20px;
-            margin-bottom: 20px;
-            font-size: .8rem;
-        }
-
-        .product-thumbnails-left img, 
-        .product-thumbnails-right img {
-            width: 22%;
-        }
-        
-    }
-
-    @media (max-width: 550px) {
         .about-title {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
         .about-text {
-            font-size: .8rem;
+            font-size: 1rem;
         }
         .product-title-left,
         .product-title-right {
-            font-size: .8rem;
-            margin-bottom: 5px;
-            letter-spacing: 3px;
+            font-size: .9rem;
+            margin: 10px 5px 10px 5px;
         }
         .product-description-left, 
         .product-description-right {
+            padding: 0 10px;
             margin-bottom: 10px;
-            padding: 0 5px;
-            font-size: .5rem;
-            gap: 0;
-            letter-spacing: 2px;
+            margin-top: 0px;
+            font-size: .7rem;
         }
 
-        .product-thumbnails-left, 
+        .product-thumbnails-left,
         .product-thumbnails-right {
-            gap: 5px 12px;
+            gap: 12px 15px;
         }
-
         .product-thumbnails-left img, 
         .product-thumbnails-right img {
             width: 20%;
         }
-        
     }
     /* Tech Section */
     .tech-section-background {
@@ -927,6 +898,9 @@
     }
 
     @media (max-width: 600px) {
+        .tech-section-background {
+            padding: 60px 0px;
+        }
         .tech-feature-item,
         .tech-feature-item-right {
             flex-direction: column;
@@ -940,10 +914,19 @@
         }
         .tech-feature-item p, 
         .tech-feature-item-right p {
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
         .tech-line-subtitle {
         width: 300px;
+        }
+        .bottom-title,
+        .bottom-title-right {
+            margin: 40px 0;
+        }
+        .tech-main-title,
+        .tech-main-title-right {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
         }
     }
 
@@ -1125,18 +1108,40 @@
         .unique-description {
             padding-right: 10rem;
         }
+        .unique-section-background::before {
+            background: linear-gradient(180deg, rgb(157 113 84) 30%, rgb(155 114 87) 30%, rgba(255, 255, 255, 0) 60%);
+        }
     }
 
     @media (max-width: 600px) {
+        .unique-section-background {
+            padding: 80px 0;
+            padding-left: 3rem;
+        }
+        .unique-title {
+            font-size: 1.5em;
+        }
+        .unique-flex {
+            margin: 50px auto;
+        }
+        .unique-description {
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+        .feature-item {
+            flex-direction: column;
+            align-items: start;
+        }
         .feature-item svg {
-            width: 200px;
-            height: 150px;
+            width: 80px;
+            height: auto;
         }
         .feature-text h3 {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
         .feature-text p {
-            font-size: .6rem;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
         }
         .unique-description {
             padding-right: 5rem;
@@ -1320,7 +1325,7 @@
             height: 80px;
         }
         .why-section-background {
-            padding: 120px 0px;
+            padding: 80px 0px;
             background-position: -200px 0;
             background-size: cover;
         }
@@ -1329,6 +1334,21 @@
         @media (max-width: 600px) {
         .why-title {
             font-size: 1.5rem;
+            padding-left: 2rem;
+            font-weight: 400;
+        }
+        .why-description{
+            font-size: 1.2rem;
+            font-weight: 400;
+            padding-left: 10rem;
+        }
+        .why-feature-item {
+            gap: 20px;
+            font-weight: 400;
+        }
+        .why-feature-item p {
+            max-width: 250px;
+            font-weight: 400;
         }
     }
 
@@ -1490,7 +1510,7 @@
             max-width: 70%;
         }
         .testimonial-item {
-            max-width: none;
+            max-width: 80%;
         }
         .testimonial-item-flex:nth-child(odd) {
             align-items: flex-end;
@@ -1524,16 +1544,13 @@
         .testimonial-text-right {
             text-align: start;
         }
-        }
-
-    @media (max-width: 600px) {
         .testimonial-text,
         .testimonial-text-right {
-            width: 55%;
+            width: 100%;
         }
         .testimonial-name,
         .testimonial-name-right {
-            width: 55%;
+            width: 100%;
         }
         .testimonial-image-placeholder1  {
             width: 350px;
@@ -1558,7 +1575,18 @@
         .testimonials-grid {
             justify-content: start;
             max-width: 90%;
+            gap: 50px;
             margin-left: 4rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .testimonials-section {
+            padding: 80px 0;
+        }
+        .testimonials-main-title {
+            font-size: 1.5rem;
+            margin-bottom: 50px;
         }
     }
 
@@ -1576,12 +1604,6 @@
         filter: brightness(1.4);
     }
 
-    @media (max-width: 1600px) {
-        .discover-section {
-        background-position: 400px 0;
-        }
-    }
-
     .discover-section::before {
         position: absolute;
         content: '';
@@ -1597,7 +1619,7 @@
     .discover-content {
         text-align: left;
         margin: auto;
-        padding: 100px 0;
+        padding: 100px 20px;
         max-width: 1000px;
     }
 
@@ -1675,6 +1697,86 @@
         cursor: pointer;
         background-color: #d9842e4b;
     }
+
+    /* Responsivo para telas até 1600px */
+    @media (max-width: 1600px) {
+        .discover-section {
+            background-position: 400px 0;
+        }
+    }
+
+    @media (max-width: 1440px) {
+        .discover-section {
+            background-position: 200px 0;
+            background-size: cover;
+        }
+    }
+    @media (max-width: 1024px) {
+        .discover-section {
+            background-position: -50px 0;
+        }
+        .discover-content {
+            padding: 80px 4rem;
+        }
+        .step-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .discover-title {
+            font-size: 2em;
+            letter-spacing: 4px;
+        }
+
+        .step-item svg {
+            width: 50px;
+            height: 50px;
+        }
+
+        .step-item p,
+        .whatsapp-info,
+        .whatsapp-button {
+            font-size: 1em;
+        }
+    }
+
+    /* Mobile (até 768px) */
+    @media (max-width: 768px) {
+        .discover-title {
+            font-size: 1.5em;
+            letter-spacing: 3px;
+            padding-bottom: 30px;
+        }
+
+        .step-item p,
+        .whatsapp-info,
+        .whatsapp-button {
+            font-size: 1em;
+            letter-spacing: 2px;
+        }
+
+        .step-item svg {
+            width: 50px;
+            height: 60px;
+        }
+
+        .whatsapp-button {
+            font-size: 1.1em;
+            padding: 12px 16px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .whatsapp-button {
+            line-height: 25px;
+        }
+        .whatsapp-info {
+            margin-bottom: 10px;
+        }
+    }
+
+    /* FOOTER */
 
     footer {
         background-color: black;
@@ -1801,6 +1903,102 @@
     .social-icons .insta:hover {
         fill: #f38124;
     }
+
+    /* Tablet (até 1024px) */
+    @media (max-width: 1024px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        .footer-left,
+        .footer-right {
+            width: 100%;
+            height: auto;
+            padding-top: 0;
+        }
+
+        .footer-right {
+            width: 80%;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+        }
+        .footer-image-placeholder {
+            height: 900px;
+            background-position: center;
+        }
+
+        .footer-title {
+            font-size: 2em;
+            letter-spacing: 4px;
+        }
+
+        .footer-description,
+        .contact-info p {
+            font-size: 1.2em;
+        }
+
+        .social-icons {
+            gap: 30px;
+        }
+    }
+
+    /* Mobile (até 768px) */
+    @media (max-width: 768px) {
+        .footer-content {
+            padding: 0 0 30px 0;
+        }
+
+        .footer-title {
+            font-size: 2.1em;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+
+        .footer-description,
+        .contact-info p {
+            font-size: 1em;
+            letter-spacing: 2px;
+        }
+
+        .footer-logo-placeholder {
+            width: 200px;
+            height: 150px;
+            margin-top: -50px;
+        }
+
+        .social-icons {
+            gap: 20px;
+        }
+
+        .social-icons svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons .www {
+            width: 36px;
+            height: 36px;
+        }
+    }
+    @media (max-width: 500px) {
+        .footer-right {
+            width: 90%;
+            margin-left: 1rem;
+        }
+        .footer-info {
+            margin-top: 50px;
+            flex-direction: column-reverse;
+        }
+        .footer-logo-placeholder {
+            width: 250px;
+            height: 150px;
+            margin-bottom: 30px;
+        }
+    }
+
     </style>
 <body>
     <div class="menu">
@@ -1931,7 +2129,7 @@
             </div>
         </div>
     </section>
-    <!--<section class="tech-section-background">
+    <section class="tech-section-background">
         <div class="tech-content">
             <h2 class="tech-main-title">LINHAS QUE UNEM <span>TECNOLOGIA, ESTÉTICA</span> E <span>INTELIGÊNCIA</span> PARA O
                 TRABALHO</h2>
@@ -2290,7 +2488,7 @@
             </div>
         </div>
     </section>
-     <section class="discover-section">
+    <section class="discover-section">
         <div class="discover-background"></div>
         <div class="discover-content">
             <h2 class="discover-title">DESCUBRA O PRAZER<br>DE VESTIR <span class="destaque">UNICA</span></h2>
@@ -2521,7 +2719,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const clickTargetMap = {
