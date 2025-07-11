@@ -1242,9 +1242,15 @@
       }
 
       @media (max-width: 425px) {
-
           .unique-title, .unique-description {
               margin-bottom: 30px;
+          }
+
+          .feature-item-img img {
+            width: 50px;
+            height: auto;
+            object-fit: contain;
+            display: block;
           }
 
           .feature-item {
@@ -1424,6 +1430,13 @@
           margin-bottom: 20px;
         }
       }
+
+      @media (max-width: 425px) {
+        .why-feature-item img{
+            width: 50px;
+          }
+      }
+                
 
       /* TESTIMONIAL */
 
@@ -1881,7 +1894,7 @@
 
       .contact-info p {
         font-size: var(--description-size);
-        letter-spacing: var(--letter-spacing-description);
+        letter-spacing: 1px;
         line-height: 1.4;
         font-weight: 400;
         color: white;
