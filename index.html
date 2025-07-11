@@ -281,7 +281,15 @@
 
       @media (max-width: 425px) {
         .hero-background {
-          background-position: -300px 0;
+          background-position: -110px 0;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .hero-background {
+          background-position: -200px 0;
+          height: auto;
         }
       }
 
@@ -662,6 +670,10 @@
           margin-bottom: 30px;
         }
 
+        .hero-subtitle {
+          max-width: 300px;
+        }
+
         .about-text, .product-description {
           width: 100%;
         }
@@ -674,9 +686,13 @@
         }
 
         .product-image-active {
-            width: 90%;
+            width: 95%;
             height: 100%;
             margin-left: 10px;
+        }
+
+        .product-images {
+          justify-content: space-between;
         }
 
         .product-images-flex-inside {
