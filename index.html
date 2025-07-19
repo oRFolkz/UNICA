@@ -1,0 +1,3067 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roupas para Profissionais da Beleza | Unica Essential Wear</title>
+    <meta
+      name="description"
+      content="Descubra roupas de trabalho elegantes e funcionais criadas para cabeleireiras, manicures e esteticistas. Conforto, tecnologia e estilo com a Unica."
+    />
+    <meta name="author" content="Nexgenius" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="icon"
+      href="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/UNICA-LOGO.webp?v=1750451987"
+      type="image/x-icon"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+      /* Gobal var stuff */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --heading-family: "Raleway", Arial, sans-serif !important;
+        --main-color: #d9832e;
+        --text-color: #404040;
+
+        --title-size: 2.2rem;
+        --description-size: 1rem;
+        --large-description: 1.5rem;
+
+        --letter-spacing-title: 6px;
+        --letter-spacing-description: 3px;
+      }
+
+      @media (max-width: 1000px) {
+        :root {
+          --description-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        * {
+          --title-size: 1.6rem;
+          --description-size: 1rem;
+          --letter-spacing-title: 2px;
+          --letter-spacing-description: 2px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        * {
+          --title-size: 1.4rem;
+          --description-size: 0.8rem;
+          --large-description: 1rem;
+
+          --letter-spacing-title: 2px;
+          --letter-spacing-description: 2px;
+        }
+      }
+
+      body {
+        font-family: "Raleway", Arial, sans-serif !important;
+        background: white;
+        margin: auto;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      .menu {
+        width: 100%;
+        background: black;
+        text-align: center;
+        letter-spacing: 3px;
+        padding: 25px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+      }
+
+      .menu button {
+        border: none;
+        background: transparent;
+        color: white;
+        font-family: inherit;
+        font-size: var(--description-size);
+        font-weight: 500;
+        letter-spacing: 3px;
+        margin: 0 10px;
+        transition: all 0.5s ease;
+      }
+
+      .menu button:hover,
+      .menu button.active {
+        cursor: pointer;
+        color: #d9832e;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      .menu-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .menu-panel {
+        background-color: white;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 20px;
+        z-index: 1000;
+        box-shadow: -20px 0 8px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        transform: translateX(120%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .menu-panel.show {
+        transform: translateX(0);
+      }
+
+      .close-btn {
+        font-size: 3em;
+        font-weight: bold;
+        color: var(--text-color);
+        text-align: right;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 800px) {
+        .menu {
+          flex-direction: column;
+          align-items: flex-end;
+          background-color: transparent;
+        }
+
+        .hamburger {
+          display: block;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          color: var(--text-color);
+          background-color: var(--main-color);
+          font-size: 28px;
+          cursor: pointer;
+          margin-right: 20px;
+        }
+
+        .hero-background {
+          margin-top: 0px;
+        }
+
+        .hamburger img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+        }
+
+        .menu-panel.show {
+          display: block;
+        }
+
+        .menu-buttons {
+          display: none;
+        }
+
+        .menu-buttons-mobile {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 15px;
+        }
+
+        .menu-buttons-mobile button {
+          border: none;
+          background-color: transparent;
+          color: var(--text-color);
+          width: 100%;
+          text-align: right;
+          font-size: 1.2rem;
+          letter-spacing: 2px;
+          border-bottom: 1px solid var(--main-color);
+          padding-bottom: 20px;
+        }
+      }
+
+      /* Hero */
+
+      .hero-background {
+        padding: 80px 0 80px 0;
+        margin-top: 50px;
+        height: 100vh;
+        background-image: url("https://cdn.shopify.com/s/files/1/0654/6138/7478/files/Background.webp?v=1752254846");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 1200px 0;
+        filter: brightness(1);
+        overflow: hidden;
+        position: relative;
+      }
+
+      @media (max-width: 2200px) {
+        .hero-background {
+          background-size: cover;
+          background-position: 800px 0;
+        }
+      }
+
+      @media (max-width: 1800px) {
+        .hero-background {
+          background-size: cover;
+          background-position: 400px 0;
+        }
+      }
+
+      @media (max-width: 1400px) {
+        .hero-background {
+          background-position: 300px 0;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .hero-background {
+          background-position: -40px 0;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .hero-background {
+          background-position: -110px 0;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .hero-background {
+          background-position: -200px 0;
+          height: auto;
+        }
+      }
+
+      .hero-background::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgb(249 236 221) 20%,
+          rgb(245 224 202) 50%,
+          rgba(255, 253, 248, 0) 70%
+        );
+      }
+
+      .hero-content {
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      .logo {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 60px;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        margin-left: 10px;
+        object-fit: contain;
+      }
+
+      .hero-title,
+      .hero-subtitle,
+      .hero-list {
+        font-family: "Raleway", sans-serif;
+        color: var(--text-color);
+        margin-bottom: 30px;
+        line-height: 1.4;
+        max-width: 550px;
+      }
+
+      .hero-title {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      .hero-subtitle {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        font-weight: 400;
+      }
+
+      .hero-list {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        font-weight: 400;
+      }
+
+      .hero-title .destaque,
+      .hero-list span {
+        color: var(--main-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: inherit;
+        font-size: inherit;
+      }
+
+      @media (max-width: 1400px) {
+        .logo {
+          width: 300px;
+          height: 200px;
+        }
+      }
+
+      @media (max-width: 1300px) {
+        .hero-content {
+          max-width: 1000px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .hero-content {
+            max-width: 90%;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero-background::before {
+          background: linear-gradient(
+            90deg,
+            rgb(249 236 221) 20%,
+            rgb(245 224 202) 50%,
+            rgba(255, 253, 248, 0) 100%
+          );
+        }
+      }
+
+      @media(max-width: 800px) {
+        .hero-background {
+          padding: 50px 0;
+          margin-top: 0px;
+        }
+
+        .logo {
+          width: 200px;
+          height: 100px;
+        }
+
+        .logo img {
+          margin-left: 0px;
+          margin-top: 20px;
+        }
+      }
+
+      /* ABOUT SECTION */
+      .about-section-background {
+        background: linear-gradient(#f9ecdd 0%, #edcaa5 30%, #edcaa5 80%);
+        padding: 80px 0px;
+      }
+
+      .showProduct {
+        display: none !important;
+      }
+
+      .hideProduct {
+        display: flex !important;
+      }
+
+      .about-section-div {
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      .about-content {
+        margin: auto;
+      }
+
+      .about-title,
+      .about-text {
+        line-height: 1.4;
+        color: var(--text-color);
+        margin-bottom: 50px;
+        font-family: inherit;
+        text-align: center;
+      }
+
+      .about-title {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      .about-text {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        font-weight: 400;
+      }
+
+      .about-title span {
+        font-weight: 700;
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .product-section {
+        margin-bottom: 50px;
+      }
+
+      .product-section-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+      }
+
+      .product-title, .product-description {
+          line-height: 1.4;
+          font-weight: 400;
+          color: var(--text-color);
+          margin-bottom: 20px;
+          text-align: center;
+          font-family: inherit;
+      }
+
+      .product-title {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+      }
+
+      .product-description {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        width: 50%;
+        margin: auto;
+      }
+
+      .product-title span {
+        color: var(--main-color);
+        font-weight: 700;
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .product-images-flex {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+      }
+
+      .product-images-flex-calcas {
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+        gap: 50px;
+      }
+
+      .product-images-flex-inside{
+        display: flex;
+      }
+
+      .product-calcas {
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: start;
+        margin-top: 2rem;
+      }
+
+      .product-calcas-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .product-calcas-flex p {
+        color: var(--text-color);
+        font-size: var(--description-size);
+        letter-spacing: 1px;
+        line-height: 1.4;
+        text-align: center;
+        max-width: 300px;
+      }
+
+      
+      .product-calcas-flex img{
+        width: 60px;
+        height: 60px;
+      }
+
+      .product-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 10px;
+      }
+
+      .product-image-active {
+        margin-left: 20px;
+        width: 400px;
+        height: 100%;
+      }
+
+      .product-position-relative {
+        position: relative;
+      }
+
+      .product-image-active-right {
+        margin-right: 20px;
+      }
+
+      .product-images img {
+        width: 160px;
+        height: 210px;
+        transition: transform .5s ease;
+      }
+
+      .product-images img:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+
+      .image-description-left {
+        position: absolute;
+        left: 50%;
+        top: -30px;
+        transform: translateX(-50%);
+      }
+
+      .image-description-left p{
+        letter-spacing: 1px;
+        color: var(--main-color);
+        font-weight: 600;
+      }
+
+      .image-description-right {
+        position: absolute;
+        right: 50%;
+        top: -30px;
+        transform: translateX(-50%);
+      }
+
+      .image-description-right, .image-description-left {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        color: var(--text-color);
+        line-height: 1.4;
+        font-weight: 400;
+        font-family: inherit;
+      }
+
+      @media (max-width: 1024px) {
+        .about-section-div {
+          max-width: 90%;
+        }
+        .product-image-active {
+          margin-left: 20px;
+          width: 300px;
+          height: 100%;
+        }
+        .about-text {
+          width: 80%;
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+        .product-images img {
+          height: 160px;
+        }
+
+        .product-images-flex-calcas {
+          flex-direction: column;
+        }
+
+        .product-calcas {
+          flex-direction: row;
+          gap: 0px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .product-image-active {
+          width: 180px;
+          height: 80%;
+        }
+
+        .image-description-left {
+          width: 80%;
+          letter-spacing: 1px;
+        }
+
+        .product-description {
+          width: 80%;
+        }
+
+        .product-images-flex-calcas .product-images-flex-inside .product-image-active{
+          width: 300px;
+          height: 100%;
+        }
+      }
+
+      @media (max-width: 425px) {
+
+        .showProduct {
+          display: flex !important;
+          width: 100%;
+        }
+
+        .showProduct p{
+          letter-spacing: 1px;
+          color: var(--main-color);
+          font-weight: 600;
+          margin: 20px 0 5px 0;
+        }
+
+        .hideProduct  {
+          display: none !important;
+        }
+
+        .about-title, .about-text {
+          margin-bottom: 30px;
+        }
+
+        .hero-subtitle {
+          max-width: 300px;
+        }
+
+        .about-text, .product-description {
+          width: 100%;
+        }
+
+        .product-images-flex {
+          margin-top: 50px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .product-image-active {
+            width: 95%;
+            height: 100%;
+            margin-left: 10px;
+        }
+
+        .product-images {
+          justify-content: space-between;
+        }
+
+        .product-images-flex-inside {
+          margin-bottom: 50px;
+        }
+
+        .product-images-flex-inside:nth-child(even) {
+          margin-bottom: 0px;
+        }
+
+        .product-images-flex-calcas .product-images-flex-inside {
+          margin-bottom: 0px;
+        }
+
+        .product-image-active-right {
+            margin-right: 10px;
+        }
+
+        .product-images img {
+            width: 120px;
+        }
+
+        .product-images-flex-calcas {
+          justify-content: center;
+          align-items: center;
+          margin-top: 0px;
+          gap: 0px;
+        }
+
+        .product-images-flex-calcas .product-images-flex-inside .product-image-active{
+          width: 96%;
+          height: 100%;
+        }
+
+        .product-images-flex-calcas .product-images-flex-inside .product-images img {
+            height: 100%;
+            width: 100px;
+        }
+
+        .product-calcas {
+          gap: 1rem;
+        }
+
+        .product-calcas-flex p {
+          letter-spacing: 0px;
+          font-size: .7rem;
+        }
+
+        .product-calcas-flex img {
+            width: 30px;
+            height: 30px;
+        } 
+
+        .image-description-left {
+          top: -30px;
+          left: -10px;
+        }
+
+        .image-description-left p{
+          font-size: 1rem;
+        }
+      } 
+
+       @media (max-width: 375px) { 
+        .image-description-left {
+          top: -30px;
+          left: -30px;
+        }
+       }
+
+        @media (max-width: 320px) { 
+        .image-description-left {
+          top: -30px;
+          left: -0px;
+        }
+       }
+
+
+      /* Tech Section */
+      .tech-section-background {
+        background: linear-gradient(to top, #bb8b6b  97%, #edcaa5 100%);
+        padding: 80px 0;
+      }
+
+      .tech-content {
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      .tech-main-title,
+      .tech-description {
+        line-height: 1.4;
+        font-weight: 400;
+        max-width: 1100px;
+        color: var(--text-color);
+        text-align: start;
+        margin-bottom: 50px;
+        font-family: inherit;
+        color: white;
+      }
+
+      .tech-main-title {
+        text-transform: uppercase;
+        font-size: var(--title-size) !important;
+        letter-spacing: var(--letter-spacing-title);
+      }
+
+      .tech-description {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+      }
+
+      .tech-main-title span {
+        font-weight: 700;
+        font-size: inherit;
+      }
+
+      .tech-line {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 50px;
+        text-align: left;
+        max-width: 1200px;
+      }
+
+      .tech-line-title {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+        line-height: 1.4;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .tech-line-title-right {
+        text-align: end;
+      }
+
+      .tech-line-title span {
+        color: white;
+        font-weight: 700;
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .tech-highlight-carousel {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .tech-highlight {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        will-change: transform;
+      }
+
+      .tech-feature-item {
+        flex: 0 0 35%;
+        opacity: .8;
+        transition: transform 1s;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .tech-highlight .tech-feature-item {
+        opacity: 1;
+      }
+
+      .tech-feature-item.active {
+        opacity: 1;
+      }
+
+      .tech-feature-item div {
+        background-size: 400px 600px;
+        background-position: center;
+        margin-bottom: 30px;
+      }
+
+      .tech-feature-text p {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        line-height: 1.4;
+        width: 80%;
+        margin: auto;
+        font-weight: 200;
+        color: white;
+        text-align: center;
+        font-family: inherit;
+      }
+
+      .bottom-title {
+        font-size: var(--large-description);
+        letter-spacing: 2px;
+        line-height: 1.2;
+        font-weight: 100;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      * {
+        --width: 350px;
+        --height: 600px;
+        --background-size: cover;
+        --background-repeat: no-repeat;
+      }
+
+      .imgTech1 {
+        min-width: var(--width);
+        min-height: var(--height);
+        background-size: var(--background-size);
+        background-repeat: var(--background-repeat);
+        background-position: center;
+        background-image: url("https://cdn.shopify.com/s/files/1/0654/6138/7478/files/JoggerAzul.webp?v=1752247347");
+      }
+
+      .imgTech2 {
+        min-width: var(--width);
+        min-height: var(--height);
+        background-size: var(--background-size);
+        background-repeat: var(--background-repeat);
+        background-position: center;
+        background-image: url("https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMCBranco.webp?v=1752248766");
+      }
+
+      .imgTech3 {
+        min-width: var(--width);
+        min-height: var(--height);
+        background-size: var(--background-size);
+        background-repeat: var(--background-repeat);
+        background-position: center;
+        background-image: url("https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMCPreto.webp?v=1752248931");
+      }
+
+      .imgTech4 {
+        min-width: var(--width);
+        min-height: var(--height);
+        background-size: var(--background-size);
+        background-repeat: var(--background-repeat);
+        background-position: center;
+        background-image: url("https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMLAzul.webp?v=1752249757");
+      }
+
+      .imgTech5 {
+        min-width: var(--width);
+        min-height: var(--height);
+        background-size: var(--background-size);
+        background-repeat: var(--background-repeat);
+        background-position: center;
+        background-image: url("https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMCBranca.webp?v=1752250915");
+      }
+
+      .imgTech6 {
+        min-width: var(--width);
+        min-height: var(--height);
+        background-size: var(--background-size);
+        background-repeat: var(--background-repeat);
+        background-position: center;
+        background-image: url("https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMCAzul.webp?v=1752248766");
+      }
+
+      .imgTech7 {
+        min-width: var(--width);
+        min-height: var(--height);
+        background-size: var(--background-size);
+        background-repeat: var(--background-repeat);
+        background-position: center;
+        background-image: url("https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMLBranco.webp?v=1752249758");
+      }
+
+      .imgTech8 {
+        min-width: var(--width);
+        min-height: var(--height);
+        background-size: var(--background-size);
+        background-repeat: var(--background-repeat);
+        background-position: center;
+        background-image: url("https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMCPreto.webp?v=1752248931");
+      }
+
+      @media (max-width: 1024px) {
+        .tech-content {
+            max-width: 90%;
+        }
+
+        * {
+          --width: 300px;
+          --height: 400px;
+          --background-size: cover;
+          --background-repeat: no-repeat;
+        }
+
+        .tech-line-details {
+          width: 100%;
+        }
+
+        .tech-feature-item {
+          margin-right: 10px;
+        }
+
+        .tech-feature-item div{
+          background-size: 300px 400px;
+        }
+
+        .tech-feature-item .imgTech6,
+        .tech-feature-item .imgTech7,
+        .tech-feature-item .imgTech8{
+          background-size: cover;
+        }
+        .carousel-track {
+          max-width: 95%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        * {
+          --width: 150px;
+          --height: 400px;
+          --background-size: cover;
+          --background-repeat: no-repeat;
+        }
+      }
+
+
+      @media (max-width: 425px) {
+          .tech-feature-item div{
+            background-size: cover;
+          }
+          .tech-feature-item {
+            flex: 0 0 55%;
+          }
+
+          .tech-highlight {
+            max-width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+          }
+
+          .tech-highlight .carousel-track {
+            max-width: 60%;
+          }
+
+          .tech-highlight .imgTech6, 
+          .tech-highlight .imgTech7,
+          .tech-highlight .imgTech8 {
+            width: 100%;
+            min-width: 33%;
+            min-height: 200px;
+          }
+
+          .tech-feature-text p {
+            letter-spacing: 0px;
+            line-height: 1.2;
+          }
+
+          * {
+          --width: 150px;
+          --height: 300px;
+          --background-size: cover;
+          --background-repeat: no-repeat;
+         }
+      }
+
+      /* O QUE NOS TORNA UNICOS */
+
+      .unique-section-background {
+        padding: 80px 0px;
+        background-image: url("https://i.postimg.cc/50XP9Z5x/minerva-ml-glitter.png");
+        filter: brightness(1);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: relative;
+      }
+
+      .unique-section-background::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgb(157 113 84) 20%,
+          rgb(155 114 87) 50%,
+          rgba(255, 255, 255, 0) 60%
+        );
+      }
+
+      /* Corrige background em 4k */
+      @media (min-width: 2000px) {
+          .unique-section-background::before {
+          background: linear-gradient(
+            90deg,
+            rgb(157 113 84) 55%,
+            rgb(155 114 87) 65%,
+            rgba(255, 255, 255, 0) 70%
+          );
+        }
+      }
+
+      @media (max-width: 1600px) {
+        .unique-section-background {
+          background-position: 650px 0;
+        }
+      }
+
+      @media (max-width: 1300px) {
+        .unique-section-background {
+          background-position: 500px 0;
+        }
+      }
+
+      @media (max-width: 1136px) {
+        .unique-section-background {
+          background-size: cover;
+        }
+      }
+
+      .unique-content {
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      .unique-title,
+      .unique-description {
+        line-height: 1.4;
+        max-width: 1100px;
+        color: white;
+        text-align: start;
+        margin-bottom: 50px;
+        font-family: inherit;
+        color: white;
+      }
+      .unique-title {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+        text-transform: uppercase;
+        font-family: inherit;
+        font-weight: 400;
+      }
+
+      .unique-description {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        font-family: inherit;
+        font-weight: 400;
+      }
+
+      .unique-title span {
+        color: var(--main-color);
+        font-weight: 700;
+        font-size: inherit;
+      }
+
+      .unique-features {
+        display: flex;
+        flex-direction: column;
+        max-width: 650px;
+      }
+
+      .unique-flex {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin: 100px auto;
+      }
+
+      .feature-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        gap: 50px;
+        color: white;
+      }
+
+      .feature-item .feature-item-img {
+        max-width: 80px;
+        display: flex;
+        align-items: center;
+      }
+
+      .feature-item-img img {
+        width: 80px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
+
+      .feature-item h3 {
+        font-size: var(--large-description);
+        letter-spacing: var(--letter-spacing-description);
+        line-height: 1.4;
+        font-weight: 500;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+
+      .feature-item p {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        line-height: 1.2;
+        font-weight: 300;
+      }
+
+      .unique-flex-text {
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        font-family: inherit;
+        gap: 50px;
+      }
+  
+      @media (max-width: 1024px) {
+        .unique-content {
+            max-width: 90%;
+        }
+
+
+        .unique-section-background::before {
+            background: linear-gradient(
+            90deg,
+            rgb(157 113 84) 20%,
+            rgb(155 114 87) 55%,
+            rgba(255, 255, 255, 0) 80%
+          );
+        }
+
+        .unique-section-background {
+          background-position: 300px 0;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .unique-flex-text {
+          max-width: 90%;
+        }
+
+        .feature-item-img {
+          min-width: 100px !important;
+        }
+
+        .feature-item {
+          gap: 20px;
+        }
+
+        .unique-section-background::before {
+          background: linear-gradient(
+            180deg,
+            rgb(157 113 84) 100%,
+            rgb(155 114 87) 100%
+          );
+        }
+      }
+
+      @media (max-width: 425px) {
+          .unique-title, .unique-description {
+              margin-bottom: 30px;
+          }
+
+          .feature-item-img img {
+            width: 50px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+          }
+
+          .feature-item {
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+            max-width: 100%;
+          }
+
+          .unique-flex {
+            margin: 50px auto;
+          }
+      }
+
+      /* POR QUE VESTIR UNICA */
+
+      .why-section-background {
+        padding: 80px 0px;
+        background-color: #f7e4d1;
+        background-image: url("https://i.postimg.cc/L5J0vvH8/20250708-1245-Massoterapeuta-Preparando-Ambiente-remix-01jznb6207faprqeh4y4fh7jtw-1.png");
+        filter: brightness(1);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+      }
+
+      @media (max-width: 1900px) {
+        .why-section-background {
+          background-position: -400px 0px;
+        }
+      }
+
+      @media (max-width: 1500px) {
+        .why-section-background {
+          background-size: cover;
+        }
+      }
+
+      .why-section-background::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(270deg, #f7e4d1 50%, rgba(255, 255, 255, 0) 65%);
+      }
+
+      .why-content {
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      .why-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        gap: 20px;
+      }
+
+      .why-title,
+      .why-description {
+        line-height: 1.4;
+        color: var(--text-color);
+        margin-bottom: 30px;
+        text-align: end;
+      }
+
+      .why-title {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+        text-transform: uppercase;
+        font-family: inherit;
+        font-weight: 400;
+      }
+
+      .why-description {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        font-family: inherit;
+        font-weight: 400;
+      }
+
+      .why-title span {
+        color: var(--main-color);
+        font-weight: 700;
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .why-features {
+        text-align: end;
+        margin-left: auto;
+      }
+
+      .why-feature-item {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 30px;
+        color: var(--text-color);
+        stroke-width: 2px;
+        height: 150px;
+      }
+
+      .why-feature-text {
+        max-width: 1000px;
+        text-align: end;
+      }
+
+      .why-feature-item img {
+        width: 80px;
+        height: auto;
+      }
+
+      .why-feature-item p {
+        color: var(--text-color);
+        font-size: var(--description-size);
+        letter-spacing: 3px;
+        line-height: 1.4;
+        font-weight: 400;
+        margin-left: auto;
+        width: 300px;
+        font-family: inherit;
+      }
+
+      @media (max-width: 1024px) {
+        .why-content {
+          max-width: 90%;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .why-section-background::before {
+          background: linear-gradient(270deg, #f7e4d1 100%);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .why-section-background {
+          background-color: white;
+          background: none;
+        }
+
+        .why-description, .why-title {
+          text-align: center;
+          margin: 30px auto;
+        }
+
+        .why-flex {
+          gap: 20px;
+        }
+
+        .why-feature-item {
+          flex-direction: column-reverse;
+          justify-content: start;
+          align-items: center;
+          gap: 20px;
+          margin: auto;
+          height: auto;
+        }
+
+        .why-features {
+          text-align: center;
+        }
+
+        .why-feature-item p{
+          width: 60%;
+          margin: auto;
+          text-align: center;
+          letter-spacing: 2px;
+        }
+
+        .why-feature-text {
+          margin-bottom: 20px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .why-feature-item img{
+            width: 50px;
+          }
+      }
+                
+
+      /* TESTIMONIAL */
+
+      .testimonials-section {
+        background-color: #d9842e41;
+        padding: 80px 0px;
+      }
+
+      .testimonials-width {
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      .testimonials-main-title {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+        color: var(--text-color);
+        line-height: 1.4;
+        font-weight: 300;
+        margin-bottom: 80px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .testimonials-main-title .destaque {
+        color: var(--main-color);
+        font-weight: 700;
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .testimonials-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 30px auto;
+        max-width: 1200px;
+      }
+
+      .testimonial-item {
+        max-width: 450px;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .testimonial-item-flex {
+        border-radius: 8px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+
+      .testimonial-image-placeholder1 {
+        height: 500px;
+        width: 100%;
+        background-image: url("https://i.postimg.cc/RCNyLCpV/Conhe-a-o-Look-MARA-que-a-natalia-deodato-est-usando-e-arrasando-No-mundo-da-beleza-confian-1.jpg");
+        background-size: cover;
+        background-position: -110px 0;
+        background-repeat: no-repeat;
+      }
+
+      .testimonial-image-placeholder2 {
+        height: 500px;
+        width: 100%;
+        background-image: url("https://i.postimg.cc/7hFS4Lwk/20250708-1144-Uniforme-Branco-Elegante-remix-01jzn7s1vpfacvaw909rmmhpp3.png");
+        background-size: cover;
+        background-position: -160px 0;
+        background-repeat: no-repeat;
+      }
+
+      .testimonial-name, 
+      .testimonial-name-right {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+        color: var(--text-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .testimonial-name-right {
+        text-align: end;
+      }
+
+      .testimonial-name-right span {
+        color: var(--main-color);
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .testimonial-name span {
+        color: var(--main-color);
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .testimonial-info,
+      .testimonial-info-right {
+        font-size: var(--description-size);
+        color: #777;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-info-right {
+        margin-left: auto;
+        text-align: end;
+      }
+
+      .testimonial-text,
+      .testimonial-text-right {
+        font-size: var(--large-description);
+        line-height: 1.5;
+        color: #555;
+        font-family: inherit;
+      }
+
+      .testimonial-text-right {
+        text-align: end;
+        font-family: inherit;
+      }
+
+      .testimonial-video-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .testimonial-video-text p {
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--text-color);
+        font-size: var(--large-description);
+        letter-spacing: var(--letter-spacing-description);
+      }
+
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .mute-icon {
+        position: absolute;
+        bottom: 18px;
+        right: 18px;
+        background: rgba(0,0,0,0.28);
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        user-select: none;
+        transition: background 0.2s;
+      }
+      .mute-icon:hover {
+        background: rgba(0,0,0,0.5);
+      }
+      .mute-icon span {
+        font-size: 28px;
+        color: #fff;
+        pointer-events: none;
+      }
+
+      @media (max-width: 768px) {
+        .testimonials-main-title {
+          margin-bottom: 50px;
+        }
+
+        .testimonial-item {
+          margin: auto;
+          margin-bottom: 50px;
+          width: 95%;
+        }
+
+        .testimonial-item-flex:nth-child(odd) {
+          align-items: flex-end;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .testimonials-grid {
+          max-width: 90%;
+          gap: 0px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .testimonials-section {
+          padding: 80px 0;
+        }
+
+        .testimonials-main-title {
+          margin-left: auto;
+          margin-right: auto;
+          width: 80%;
+        }
+
+        .testimonial-image-placeholder1 {
+          background-position: -120px 0;
+        }
+
+        .testimonial-image-placeholder2 {
+          background-position: -180px 0;
+        }
+        
+        .video-wrapper {
+          max-width: 90%;
+          margin: auto;
+        }
+      }
+
+      /* ATENDIMENTO */
+
+      .discover-section {
+        padding: 80px 0;
+        position: relative;
+        background-image: url("https://i.postimg.cc/TPxvk8LN/20250708-1201-Sala-de-Beleza-remix-01jzn8pr3wfpyv08e5s1n77d12.png");
+        filter: brightness(1);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 500px 0;
+      }
+
+      .discover-section::before {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        background: linear-gradient(
+            90deg,
+            rgb(157 113 84) 45%,
+            rgb(155 114 87) 58%,
+            rgba(255, 255, 255, 0) 70%
+          );
+      }
+
+      .discover-content {
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      .discover-title {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+        line-height: 1.4;
+        font-weight: 300;
+        padding-bottom: 50px;
+        text-transform: uppercase;
+        font-family: inherit;
+        color: white;
+      }
+
+      .discover-title .destaque {
+        color: var(--main-color);
+        font-weight: 700;
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .discover-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .step-item {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .step-item img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .step-item p,
+      .whatsapp-info {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        line-height: 1.4;
+        font-weight: 300;
+        color: white;
+        font-family: inherit;
+        max-width: 350px;
+      }
+
+      .whatsapp-info {
+        margin: 50px 0;
+      }
+
+      .whatsapp-button a{
+        text-decoration: none;
+        color: white;
+      }
+
+      .whatsapp-button {
+        max-width: 350px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 2px;
+        font-size: var(--large-description);
+        letter-spacing: 2px;
+        line-height: 1.4;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 30px;
+        padding: 20px;
+        transition: all 1s ease;
+        font-family: inherit;
+      }
+
+      .whatsapp-button:hover {
+        font-family: inherit;
+        cursor: pointer;
+        background-color: #d9842e4b;
+      }
+
+      @media (min-width: 2200px) {
+        .discover-section {
+          background-position: right !important;
+        }
+      }
+      
+      @media (min-width: 1920px) {
+        .discover-section {
+          background-position: 800px 0;
+        }
+      }
+      
+      @media (max-width: 1440px) {
+        .discover-section {
+          background-position: 400px 0;
+          background-size: cover;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .discover-content {
+          max-width: 90%;
+        }
+        .discover-section {
+          background-position: 100px 0;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .discover-section::before {
+          background: linear-gradient(90deg, rgb(143 102 73) 10%, rgb(151 106 76) 40%, rgba(255, 255, 255, 0) 90%);
+        }
+      }
+
+      @media (max-width: 425px) {
+        .step-item p {
+          max-width: 150px;
+        }
+        .whatsapp-button {
+          padding: 12px;
+          width: 100%;
+        }
+
+        .discover-section {
+          background-position: -350px 0;
+          background-size: cover;
+        }
+      }
+
+      @media (max-width: 375px) {
+        .whatsapp-button {
+          max-width: 80%;
+        }
+        .whatsapp-info {
+          font-size: .8rem;
+           letter-spacing: 1px;
+        }
+        .discover-section {
+          background-position: -340px 0;
+        }
+      }
+      /* FOOTER */
+      footer {
+        background-color: #74513d;
+        color: white;
+        padding-bottom: 20px;
+      }
+
+      .footer-content {
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      .footer-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+      }
+
+
+      .footer-left {
+        width: 100%;
+        height: 800px;
+      }
+
+      .footer-image-placeholder {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        background-image: url("https://i.postimg.cc/yxJfdZvk/291801056-1128835451006159-871619380242852270-n-1.jpg");
+        background-size: cover;
+        background-position: top;
+      }
+
+      .footer-right {
+        width: 50%;
+      }
+
+      .footer-title {
+        font-size: var(--title-size);
+        letter-spacing: var(--letter-spacing-title);
+        line-height: 1.4;
+        font-weight: 300;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        color: white;
+        font-family: inherit;
+      }
+
+      .footer-title span {
+        color: var(--main-color);
+        font-weight: 700;
+        font-size: inherit;
+      }
+
+      .footer-description {
+        font-size: var(--description-size);
+        letter-spacing: var(--letter-spacing-description);
+        line-height: 1.4;
+        font-weight: 300;
+        color: white;
+        margin-bottom: 20px;
+        font-family: inherit;
+      }
+
+      .footer-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 100px;
+      }
+
+      .contact-info {
+        margin: 50px 0;
+      }
+
+      .contact-info a{
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .contact-info p {
+        font-size: var(--description-size);
+        letter-spacing: 1px;
+        line-height: 1.4;
+        font-weight: 400;
+        color: white;
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-family: inherit;
+      }
+
+      .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
+
+      .footer-logo-placeholder {
+        width: 200px;
+        height: 150px;
+        margin-top: -60px;
+        background-image: url("https://i.ibb.co/wZprF6KL/UNICA-PNG-1-1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .social-icons svg {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        transition: all 0.5s ease;
+      }
+
+      .social-icons .www {
+        width: 32px;
+        height: 32px;
+      }
+
+      .social-icons .whats:hover {
+        fill: #25d366;
+      }
+
+      .social-icons .www:hover {
+        fill: blue;
+      }
+
+      .social-icons .insta:hover {
+        fill: #f38124;
+      }
+
+      @media (max-width: 1024px) {
+        .footer-flex {
+          flex-direction: column;
+        }
+
+        .footer-right {
+          width: 80%;
+        }
+
+        .footer-info {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          gap: 100px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .footer-info {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .contact-info p {
+          font-size: .8rem;
+          margin: 10px 0;
+        }
+      }
+
+    /* WPP FIXED */
+      .whatsapp-float{
+          position:fixed;
+          bottom:20px;
+          right:20px;
+          width:60px;
+          height:60px;
+          background:#25D366;
+          border-radius:50%;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          box-shadow:0 5px 10px #25d36596;
+          z-index:1000;
+      }
+
+      .whatsapp-float img{
+          width:32px;
+          height:32px;
+          filter:invert(1);
+          pointer-events:none;
+      }
+
+      @keyframes buzz {
+          0%,85%  { transform:translate(0); }
+          88%,94% { transform:translate(-2px,0); }
+          91%,97% { transform:translate( 2px,0); }
+          100%    { transform:translate(0); }
+      }
+
+    .whatsapp-float{
+        animation:buzz 3s infinite;
+        cursor:pointer;
+    }
+
+    .madeBy {
+      background-color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px
+    }
+
+    .madeBy p {
+      color: white;
+      font-family: inherit;
+    }
+
+    .madeBy img{
+      margin-top: 5px;
+      max-height: 30px;
+    }
+    </style>
+    <body>
+      <div class="menu">
+        <div class="menu-buttons">
+          <button id="scrollToAbout">MODELOS</button>
+          <button id="scrollToTech">LINHAS</button>
+          <button id="scrollToUnique">DIFERENCIAIS</button>
+          <button id="scrollToWhy">VESTIR UNICA</button>
+          <button id="scrollToTestimonial">DEPOIMENTOS</button>
+          <button id="scrollToDiscover">ATENDIMENTO</button>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/LOGOTIPO_MOBILE.webp?v=1752246376"
+            alt="LOGO"
+          />
+        </div>
+      </div>
+      <div class="menu-panel" id="menuPanel">
+        <div class="close-btn" id="closeBtn">&times;</div>
+        <div class="menu-buttons-mobile">
+          <button id="scrollToAbout">MODELOS</button>
+          <button id="scrollToTech">LINHAS</button>
+          <button id="scrollToUnique">DIFERENCIAIS</button>
+          <button id="scrollToWhy">VESTIR UNICA</button>
+          <button id="scrollToTestimonial">DEPOIMENTOS</button>
+          <button id="scrollToDiscover">ATENDIMENTO</button>
+        </div>
+      </div>
+      <div class="hero-background">
+        <div class="hero-content">
+          <div class="logo">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/UNICA-PRINCIPAL.webp?v=1750452093"
+              alt="Logo Unica"
+            />
+          </div>
+          <div class="hero-title">
+            TRABALHE COM ESTILO.<br />VISTA-SE COM
+            <span class="destaque">UNICA</span>.
+          </div>
+          <div class="hero-subtitle">
+            Fuja do óbvio e do básico.<br />Com modelagens autorais, tecidos
+            tecnológicos e um toque de exclusividade, nossas peças foram
+            pensadas para profissionais que fazem da beleza sua assinatura.
+          </div>
+          <div class="hero-list">
+            Vista-se com <span>BELEZA</span>.<br />
+            Vista-se com <span>CONFORTO</span>.<br />
+            Vista-se com <span>PRATICIDADE</span>.
+          </div>
+        </div>
+      </div>
+      <section class="about-section-background">
+        <div class="about-section-div">
+          <div class="about-section">
+            <div class="about-content">
+              <h2 class="about-title">
+                MODELOS PENSADOS PARA A <span>ROTINA EXIGENTE</span> DE QUEM NÃO
+                ABRE MÃO DA
+                <span>ELEGÂNCIA</span>
+              </h2>
+            </div>
+          </div>
+          <div class="product-section">
+              <div class="product-details">
+                <div>
+                  <h3 class="product-title">VESTE <span>WRAP ALINA</span></h3>
+                  <p class="product-description">Design transpassado que alia funcionalidade a um toque contemporâneo, proporcionando um caimento elegante para todos os tipos de corpo.</p>
+                </div>
+                <div class="product-images-flex">
+                  <div class="showProduct">
+                    <p>Manga Curta</p>
+                  </div>
+                    <div class="product-images-flex-inside">
+                      <div class="product-images">
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMCAzul.webp?v=1752248766" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMCBranco.webp?v=1752248766" alt="Veste Wrap MC Venus Glitter" loading="lazy" >
+                      </div>
+                      <div class="product-position-relative">
+                        <img class="product-image-active" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMCPreto.webp?v=1752248766" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                        <div class="image-description-left hideProduct">
+                          <p>Manga Curta</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="showProduct">
+                      <p>Manga Longa</p>
+                    </div>
+                    <div class="product-images-flex-inside showProduct">
+                      <div class="product-images">
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMLAzul.webp?v=1752248766" alt="Veste Wrap ML Venus Alcaparra" loading="lazy" >
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMLBranco.webp?v=1752248765" alt="Veste Wrap ML Venus Glitter" loading="lazy" >
+                      </div>
+                      <div class="product-position-relative">
+                        <img class="product-image-active product-image-active-right" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMLPreto.webp?v=1752248766" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                        <div class="image-description-left hideProduct">
+                          <p>Manga Longa</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-images-flex-inside hideProduct">
+                        <div class="product-position-relative">
+                          <img class="product-image-active product-image-active-right" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMLPreto.webp?v=1752248766" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <div class="image-description-left ">
+                            <p>Manga Longa</p>
+                        </div>
+                      </div>
+                      <div class="product-images">
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMLAzul.webp?v=1752248766" alt="Veste Wrap ML Venus Alcaparra" loading="lazy" >
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/WrapMLBranco.webp?v=1752248765" alt="Veste Wrap ML Venus Glitter" loading="lazy" >
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="product-section">
+              <div class="product-details">
+                <div>
+                  <h3 class="product-title">VESTE <span>VÊNUS</span></h3>
+                  <p class="product-description">Design pensado para valorizar a feminilidade e as formas do corpo, com dois bolsos frontais e modelagem alongada, que agrega charme e oferece cobertura perfeita.</p>
+                </div>
+                <div class="product-images-flex">
+                    <div class="showProduct">
+                      <p>Manga Curta</p>
+                    </div>
+                    <div class="product-images-flex-inside">
+                      <div class="product-images">
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMCAzul.webp?v=1752248932" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMCBranco.webp?v=1752248931" alt="Veste Wrap MC Venus Glitter" loading="lazy" >
+                      </div>
+                      <div class="product-position-relative">
+                        <img class="product-image-active" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMCPreto.webp?v=1752248931" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                        <div class="image-description-left hideProduct">
+                          <p>Manga Curta</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="showProduct">
+                      <p>Manga Longa</p>
+                    </div>
+                    <div class="product-images-flex-inside showProduct">
+                      <div class="product-images">
+                        <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMLAzul.webp?v=1752249757" alt="Veste Wrap ML Venus Glitter" loading="lazy" >
+                        <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMLBranco.webp?v=1752249758" alt="Veste Wrap ML Venus Alcaparra" loading="lazy" >
+                        </div>
+                      <div class="product-position-relative">
+                        <img class="product-image-active" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMLPreto.webp?v=1752249758" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                        <div class="image-description-left hideProduct">
+                          <p>Manga Longa</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-images-flex-inside hideProduct">
+                        <div class="product-position-relative">
+                          <img class="product-image-active product-image-active-right" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMLPreto.webp?v=1752249758" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <div class="image-description-left">
+                            <p>Manga Longa</p>
+                        </div>
+                      </div>
+                      <div class="product-images">
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMLAzul.webp?v=1752249757" alt="Veste Wrap ML Venus Alcaparra" loading="lazy" >
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/VenusMLBranco.webp?v=1752249758" alt="Veste Wrap ML Venus Glitter" loading="lazy" >
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="product-section">
+              <div class="product-details">
+                <div>
+                  <h3 class="product-title">BLUSA <span>MINERVA</span></h3>
+                  <p class="product-description">Essencial e atemporal, perfeita para qualquer ambiente de trabalho. Seu design valoriza a feminilidade, com recortes que alongam a silhueta e dois bolsos frontais para maior praticidade.</p>
+                </div>
+                <div class="product-images-flex">
+                    <div class="showProduct">
+                      <p>Manga Curta</p>
+                    </div>
+                    <div class="product-images-flex-inside">
+                      <div class="product-images">
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMCAzul.webp?v=1752250916" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMCBranca.webp?v=1752250915" alt="Veste Wrap MC Venus Glitter" loading="lazy" >
+                      </div>
+                      <div class="product-position-relative">
+                        <img class="product-image-active" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMCPreta.webp?v=1752250915" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                        <div class="image-description-left hideProduct">
+                          <p>Manga Curta</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="showProduct">
+                      <p>Manga Longa</p>
+                    </div>
+                    <div class="product-images-flex-inside showProduct">
+                      <div class="product-images">
+                        <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMLAzul.webp?v=1752251097" alt="Veste Wrap ML Venus Alcaparra" loading="lazy" >
+                        <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMLBranco.webp?v=1752251097" alt="Veste Wrap ML Venus Glitter" loading="lazy" >
+                      </div>
+                      <div class="product-position-relative">
+                        <img class="product-image-active" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMLPreta.webp?v=1752251097" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                        <div class="image-description-left hideProduct">
+                          <p>Manga Longa</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-images-flex-inside hideProduct">
+                        <div class="product-position-relative">
+                          <img class="product-image-active product-image-active-right" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMLPreta.webp?v=1752251097" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <div class="image-description-left">
+                            <p>Manga Longa</p>
+                        </div>
+                      </div>
+                      <div class="product-images">
+                        <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMLAzul.webp?v=1752251097" alt="Veste Wrap ML Venus Alcaparra" loading="lazy" >
+                        <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MinervaMLBranco.webp?v=1752251097" alt="Veste Wrap ML Venus Glitter" loading="lazy" >
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="product-section">
+              <div class="product-details">
+                <div>
+                  <h3 class="product-title">CALÇA <span>FLARE SABRINHA</span></h3>
+                  <p class="product-description"></p>
+                </div>
+                <div class="product-images-flex product-images-flex-calcas">
+                    <div class="product-images-flex-inside">
+                      <div class="product-images">
+                        <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/FlareAzul.webp?v=1752247881" alt="Veste Wrap MC Venus Glitter" loading="lazy" >
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/FlareBranca.webp?v=1752247881" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                      </div>
+                      <div class="product-position-relative">
+                        <img class="product-image-active" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/FlarePreto.webp?v=1752247881" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                        <div class="image-description-left">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-images-flex-inside product-calcas">
+                      <div class="product-calcas-flex">
+                        <img src="https://i.postimg.cc/bY3wF9F1/value.png" alt="">
+                        <p>Design elegante e sofisticado, ideal para diversas ocasiões.</p>
+                      </div>
+                      <div class="product-calcas-flex">
+                        <img src="https://i.postimg.cc/vHTZRxpk/smiling.png" alt="">
+                        <p>Cintura alta que proporciona conforto ao abdômen e valoriza a silhueta.</p>
+                      </div>
+                      <div class="product-calcas-flex">
+                        <img src="https://i.postimg.cc/Gthhm49B/waist-4.png" alt="">
+                        <p>Modelagem que oferece excelente mobilidade.</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="product-section">
+              <div class="product-details">
+                <div>
+                  <h3 class="product-title">CALÇA <span>MONTARIA FLÁVIA</span></h3>
+                  <p class="product-description"></p>
+                </div>
+                  <div class="product-images-flex product-images-flex-calcas">
+                      <div class="product-images-flex-inside">
+                        <div class="product-images">
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MontariaAzul.webp?v=1752247137" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MontariaBranca.webp?v=1752247137" alt="Veste Wrap MC Venus Glitter" loading="lazy" >
+                        </div>
+                        <div class="product-position-relative">
+                          <img class="product-image-active" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/MontariaPreta.webp?v=1752247137" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <div class="image-description-left">
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-images-flex-inside product-calcas">
+                        <div class="product-calcas-flex">
+                            <img src="https://i.postimg.cc/kG1M67tT/waist-5.png" alt="">   
+                          <p>Recortes exclusivos que valorizam e alongam a silhueta feminina.</p>
+                        </div>
+                        <div class="product-calcas-flex">
+                            <img src="https://i.postimg.cc/bdcCRtbr/feather.png" alt="">                      
+                            <p>Cintura alta para maior conforto na região do abdômen.</p>
+                        </div>
+                        <div class="product-calcas-flex">                      
+                            <img src="https://i.postimg.cc/bN48KC0S/flexibility-1.png" alt="">                          
+                            <p>Tecido flexível que oferece liberdade de movimentos e ajuste ao corpo.</p>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="product-section">
+              <div class="product-details">
+                <div>
+                  <h3 class="product-title">CALÇA <span>JOGGER CÁSSIA</span></h3>
+                  <p class="product-description"></p>
+                </div>
+                  <div class="product-images-flex product-images-flex-calcas">
+                      <div class="product-images-flex-inside">
+                        <div class="product-images">
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/JoggerAzul.webp?v=1752247347" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <img src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/JoggerBranca.webp?v=1752247346" alt="Veste Wrap MC Venus Glitter" loading="lazy" >
+                        </div>
+                        <div class="product-position-relative">
+                          <img class="product-image-active" src="https://cdn.shopify.com/s/files/1/0654/6138/7478/files/JoggerPreta.webp?v=1752247346" alt="Veste Wrap MC Venus Alcaparra" loading="lazy" >
+                          <div class="image-description-left">
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-images-flex-inside product-calcas">
+                        <div class="product-calcas-flex">
+                          <img src="https://i.postimg.cc/hPsZmfvD/waist-2.png" alt="">
+                          <p>Cintura com elástico para ajuste perfeito e maior conforto.</p>
+                        </div>
+                        <div class="product-calcas-flex">
+                          <img src="https://i.postimg.cc/HkLZ9d8Q/wind.png" alt="">                          
+                        <p>Modelagem mais solta, garantindo liberdade de movimentos.</p>
+                        </div>
+                        <div class="product-calcas-flex">
+                          <img src="https://i.postimg.cc/WbTftM2Y/weight-loss.png" alt="">
+                          <p>Veste bem todos os tipos de corpo, além de contar com bolsos funcionais.</p>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="tech-section-background">
+        <div class="tech-content">
+          <h2 class="tech-main-title">
+            LINHAS QUE UNEM <span>TECNOLOGIA, ESTÉTICA</span> E
+            <span>PRATICIDADE</span> PARA O SEU DIA A DIA DE TRABALHO
+          </h2>
+          <p class="tech-description">
+            Na Unica, cada linha foi desenvolvida para atender às exigências da
+            rotina profissional com sofisticação, durabilidade e conforto
+            absoluto.<br /><br />
+            Conheça a diferença entre as duas linhas:
+          </p>
+          <div class="tech-line">
+            <div class="tech-line-details">
+              <h3 class="tech-line-title">LINHA TOP <span>ANTIODOR</span></h3>
+              <div class="tech-highlight-carousel">
+                <div class="carousel-track">
+                  <div class="tech-feature-item">
+                    <div class="imgTech1"></div>
+                    <div class="tech-feature-text">
+                      <p>Não precisa passar</p>
+                    </div>
+                  </div>
+                  <div class="tech-feature-item">
+                    <div class="imgTech2"></div>
+                    <div class="tech-feature-text">
+                      <p>Proteção solar UV 50+</p>
+                    </div>
+                  </div>
+                  <div class="tech-feature-item">
+                    <div class="imgTech3"></div>
+                    <div class="tech-feature-text">
+                      <p>Zero transparência, mesmo nas cores claras</p>
+                    </div>
+                  </div>
+                  <div class="tech-feature-item">
+                    <div class="imgTech4"></div>
+                    <div class="tech-feature-text">
+                      <p>Ativa a microcirculação sanguínea combatendo a fadiga muscular</p>
+                    </div>
+                  </div>
+                  <div class="tech-feature-item">
+                    <div class="imgTech5"></div>
+                    <div class="tech-feature-text">
+                      <p>Reduz os sinais da celulite com o uso contínuo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="bottom-title">
+                Coleção pensada para facilitar sua vida e realçar sua beleza.
+              </h2>
+            </div>
+            <div class="tech-line-details">
+              <h3 class="tech-line-title">LINHA TREND <span>CONFORTO</span></h3>
+              <div class="tech-highlight">
+                <div class="carousel-track">
+                  <div class="tech-feature-item">
+                    <div class="imgTech6"></div>
+                    <div class="tech-feature-text">
+                      <p>Secagem rápida</p>
+                    </div>
+                  </div>
+                  <div class="tech-feature-item">
+                    <div class="imgTech7"></div>
+                    <div class="tech-feature-text">
+                      <p>Tecido tecnológico que não precisa passar</p>
+                    </div>
+                  </div>
+                  <div class="tech-feature-item">
+                    <div class="imgTech8"></div>
+                    <div class="tech-feature-text">
+                      <p>Conforto térmico e respirabilidade</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="bottom-title">
+                Coleção criada para o seu conforto, alegria e para você se sentir bem vestida sempre. 
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unique-section-background">
+        <div class="unique-content">
+          <h2 class="unique-title">O QUE NOS TORNA <span>ÚNICAS</span></h2>
+          <p class="unique-description">
+            Na Unica, cada peça é fruto de uma curadoria criteriosa <br />entre
+            estética e funcionalidade. <br />Desenvolvemos soluções que atendem
+            às exigências do<br />
+            dia a dia, com leveza, tecnologia e sofisticação.
+          </p>
+          <div class="unique-flex">
+            <div class="unique-flex-text">
+              <div class="unique-features">
+                <div class="feature-item">
+                  <div class="feature-item-img">
+                    <img src="https://i.postimg.cc/t4ySrRyT/digitalization.png" alt="">
+                  </div>
+                  <div class="feature-text">
+                    <h3>Tecnologia têxtil de ponta</h3>
+                    <p>
+                      Tecidos anti-odor com proteção UV50+ e infravermelho, que ativa micropartículas capazes de reduzir celulite e fadiga muscular com o uso contínuo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="unique-features">
+                <div class="feature-item">
+                  <div class="feature-item-img">
+                      <img src="https://i.postimg.cc/kMQXB1Vr/design.png" alt="">
+                  </div>
+                  <div class="feature-text">
+                    <h3>Modelagem funcional e refinada</h3>
+                    <p>
+                      Peças que oferecem estilo, conforto, caimento impecável e bolsos estrategicamente posicionados para o seu dia a dia profissional.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="unique-features">
+                <div class="feature-item">
+                  <div class="feature-item-img">
+                    <img src="https://i.postimg.cc/RVt16z7S/color-palette.png" alt="">
+                  </div>
+                  <div class="feature-text">
+                    <h3>Paleta de cores autoral e versátil</h3>
+                    <p>
+                      Muito além do preto e branco. Nossas cores exclusivas
+                      valorizam a identidade de cada ambiente de trabalho,
+                      conferindo sofisticação e estilo único.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="unique-features">
+                <div class="feature-item">
+                  <div class="feature-item-img">
+                    <img src="https://i.postimg.cc/sfQp7kkN/time.png" alt="">
+                  </div>
+                  <div class="feature-text">
+                    <h3>Facilidade que se sente no toque e no tempo</h3>
+                    <p>
+                      Não precisa passar e não desbota. Uma peça prática, que te acompanha com beleza e eficiência, dia após dia.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="unique-features">
+                <div class="feature-item">
+                  <div class="feature-item-img">
+                    <img src="https://i.postimg.cc/QtWC4jxV/leave-1.png" alt="">
+                  </div>
+                  <div class="feature-text">
+                    <h3>SUSTENTABILIDADE COM PROPÓSITO</h3>
+                    <p>
+                      Ao escolher a Unica, você contribui para a redução do descarte de lixo têxtil, colaborando com um futuro mais sustentável.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="unique-image"></div>
+          </div>
+        </div>
+      </section>
+      <section class="why-section-background">
+        <div class="why-content">
+          <h2 class="why-title">POR QUE VESTIR <span>UNICA</span> ?</h2>
+          <p class="why-description">
+            Porque você merece se sentir<br />
+            bonita todos os dias
+          </p>
+          <div class="why-flex">
+            <div class="why-feature-item">
+              <div class="why-feature-text">
+                <p>
+                  Conforto e maciez para acompanhar você na rotina.
+                </p>
+              </div>
+              <img src="https://i.postimg.cc/sfqNwxrZ/get-dressed.png" alt="">
+            </div>
+            <div class="why-feature-item">
+              <div class="why-feature-text">
+                <p>
+                  Mais tempo para você e economia com peças que não desbotam e duram mais.
+                </p>
+              </div>
+              <img src="https://i.postimg.cc/RZx3d8gN/iron.png" alt="">
+            </div>
+            <div class="why-feature-item">
+              <div class="why-feature-text">
+                <p>
+                  Modelos que destacam sua presença, dedicação e estilo em todos os momentos.
+                </p>
+              </div>
+              <img src="https://i.postimg.cc/rmd9rGzZ/self-confidence.png" alt="">
+            </div>
+            <div class="why-feature-item">
+              <div class="why-feature-text">
+                <p>
+                  Dona(o) de si, com roupas que comunicam profissionalismo e cuidado.
+                </p>
+              </div>
+              <img src="https://i.postimg.cc/y8S8HCc9/hand-gesture.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials-section">
+        <div class="testimonial-width">
+          <h2 class="testimonials-main-title">
+            O QUE ESTÃO DIZENDO SOBRE A <span class="destaque">UNICA</span>
+          </h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-item">
+              <div class="testimonial-image-placeholder1"></div>
+              <div class="testimonial-item-flex">
+                <h3 class="testimonial-name">NATÁLIA <span>DEODATO</span></h3>
+                <p class="testimonial-info">ex-BBB e Profissional da beleza</p>
+                <p class="testimonial-text">
+                  "Quando vesti minha Unica pela primeira vez, me senti mais
+                  profissional. Minhas clientes elogiam até hoje."
+                </p>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="testimonial-item-flex">
+                <h3 class="testimonial-name-right">
+                  RENATA <span>ESTETICISTA</span>
+                </h3>
+                <p class="testimonial-info-right">– São Paulo/SP</p>
+                <p class="testimonial-text-right">
+                  "Ficava com vergonha do branco transparente… agora uso a linha
+                  TOP e é zero transparência!"
+                </p>
+              </div>
+              <div class="testimonial-image-placeholder2"></div>
+            </div>
+          </div>
+            <div class="testimonial-video-text">
+              <p></p>
+              <div class="testimonial-video">
+                <div class="video-wrapper">
+                  <video
+                    id="depoimentoVideo"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    style="width:100%; border-radius:5px;"
+                  >
+                    <source src="https://cdn.shopify.com/videos/c/o/v/543c3f7fe5ae4d4cb415305ad329650f.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                  </video>
+                  <div class="mute-icon" id="muteIcon" title="Clique para habilitar/desabilitar o som">
+                    <span id="muteStatus">🔇</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="discover-section">
+        <div class="discover-background"></div>
+        <div class="discover-content">
+          <h2 class="discover-title">
+            DESCUBRA O PRAZER<br />DE VESTIR <span class="destaque">UNICA</span>
+          </h2>
+          <div class="discover-steps">
+            <div class="step-item">
+              <img src="https://i.postimg.cc/kGMJ7PPv/swipe-left.png" alt="">
+              <p>Explore nossos modelos e escolha suas cores preferidas.</p>
+            </div>
+            <div class="step-item">
+              <img src="https://i.postimg.cc/Kj9ZzpZS/customize.png" alt="">
+              <p>Personalize com o bordado da sua logomarca. (Opcional)</p>
+            </div>
+            <div class="step-item">
+              <img src="https://i.postimg.cc/0Q05g2FN/customer-service-1.png" alt="">
+              <p>Fale com nossa equipe via WhatsApp para finalizar seu pedido.</p>
+            </div>
+            <div class="step-item">
+              <img src="https://i.postimg.cc/k4mMhtjZ/delivery-truck.png" alt="">
+              <p>Receba em casa com todo o cuidado e atenção que você merece.</p>
+            </div>
+          </div>
+          <p class="whatsapp-info">Solicite cores extras sob demanda pelo WhatsApp</p>
+          <div class="whatsapp-button">
+            <a
+              href="https://wa.me/+5511942498914?text=Oi%2C%20vim%20da%20loja%20online%20da%20Unica.%20Quero%20saber%20mais%20sobre%20roupas%20para%20o%20setor%20de%20beleza%21"
+            >Fale com um de nossos especialistas</a>
+          </div>
+          </a>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-content">
+          <div class="footer-flex">
+            <div class="footer-left">
+              <div class="footer-image-placeholder"></div>
+            </div>
+            <div class="footer-right">
+              <h3 class="footer-title">
+                ROUPAS PARA <span>TRABALHAR.<br /></span>UM PROPÓSITO PARA
+                <span>VESTIR.</span>
+              </h3>
+              <p class="footer-description">
+                A Unica é uma marca criada para enaltecer profissionais que fazem
+                do cuidado o seu ofício. Pensamos cada detalhe com atenção à
+                estética, à funcionalidade e ao conforto, porque acreditamos que
+                vestir-se bem é parte do reconhecimento.
+              </p>
+              <p class="footer-description">
+                Com mais de 20 anos de experiência na moda, nosso propósito é valorizar quem transforma rotina em excelência e contribuir para a redução do descarte têxtil no meio ambiente.
+              </p>
+            </div>
+          </div>
+          <div class="footer-info">
+            <div class="contact-info">
+              <p><span class="icon-placeholder">📍</span> Base em São Paulo</p>
+              <p><span class="icon-placeholder">🏬</span> Loja propria</p>
+              <p><span class="icon-placeholder">💬</span>                 
+                <a href="https://wa.me/+5511942498914?text=Oi%2C%20vim%20da%20loja%20online%20da%20Unica.%20Quero%20saber%20mais%20sobre%20roupas%20para%20o%20setor%20de%20beleza%21">Agende sua visita através do whatsapp: <br> +55 11 94249-8914</p></a>
+              <p><span class="icon-placeholder">🌐</span> Site: www.useunica.shop</p>
+            </div>
+            <div class="social-media">
+              <div class="footer-logo-placeholder"></div>
+              <div class="social-icons">
+                <a
+                  href="https://wa.me/+5511942498914?text=Oi%2C%20vim%20da%20loja%20online%20da%20Unica.%20Quero%20saber%20mais%20sobre%20roupas%20para%20o%20setor%20de%20beleza%21"
+                >
+                  <svg
+                    class="whats"
+                    fill="#ffffff"
+                    viewBox="0 0 256 256"
+                    id="Flat"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M128.00049,28A100.02594,100.02594,0,0,0,41.11475,177.53908l-9.0044,31.51661a11.99971,11.99971,0,0,0,14.835,14.834l31.5166-9.00391A100.00677,100.00677,0,1,0,128.00049,28Zm0,192a91.87082,91.87082,0,0,1-46.95264-12.86719,3.99494,3.99494,0,0,0-3.14355-.4082l-33.15723,9.47363a3.99979,3.99979,0,0,1-4.94434-4.94531l9.47266-33.15625a4.00111,4.00111,0,0,0-.4082-3.14355A92.01077,92.01077,0,1,1,128.00049,220Zm50.51123-73.457-20.45947-11.69141a12.01054,12.01054,0,0,0-12.12745.12891l-13.80664,8.28418a44.04183,44.04183,0,0,1-19.38232-19.38281l8.28369-13.80664a12.0108,12.0108,0,0,0,.12891-12.127l-11.69092-20.46A10.91584,10.91584,0,0,0,100,72a32.00811,32.00811,0,0,0-32,31.88086A84.001,84.001,0,0,0,151.999,188h.12012A32.00842,32.00842,0,0,0,184,156,10.913,10.913,0,0,0,178.51172,146.543ZM152.10791,180h-.1084A75.99972,75.99972,0,0,1,76,103.8926,23.997,23.997,0,0,1,100,80a2.89975,2.89975,0,0,1,2.51172,1.457L114.20264,101.918a4.00418,4.00418,0,0,1-.043,4.042l-9.38916,15.64844a3.9987,3.9987,0,0,0-.21826,3.69824,52.04112,52.04112,0,0,0,26.1416,26.1416,3.99707,3.99707,0,0,0,3.69873-.21875L150.04,141.84084a4.006,4.006,0,0,1,4.043-.04394l20.46045,11.69238A2.89712,2.89712,0,0,1,176,156,23.99725,23.99725,0,0,1,152.10791,180Z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+                <a href="https://useunica.myshopify.com/">
+                  <svg
+                    class="www"
+                    fill="#ffffff"
+                    height="150px"
+                    width="150px"
+                    version="1.1"
+                    id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 171.991 171.991"
+                    xml:space="preserve"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M85.996,171.989c-0.497,0.006-0.996-0.004-1.495-0.013c-0.148,0.007-0.304,0.003-0.444,0.01 c-0.296,0-0.59-0.015-0.882-0.043c-28.567-0.926-53.651-15.85-68.608-38.112c-0.168-0.185-0.309-0.395-0.416-0.624 C5.189,119.614-0.023,103.338,0.002,85.872l0,0c0.033-22.97,9.009-44.552,25.274-60.77C40.902,9.521,61.462,0.682,83.42,0.04 c0.293-0.026,0.628-0.008,0.884-0.04c0.151,0,0.302,0.004,0.452,0.012c0.455-0.007,0.907-0.008,1.362-0.009 c22.97,0.032,44.552,9.008,60.771,25.273c16.219,16.265,25.133,37.873,25.1,60.843c-0.025,17.448-5.276,33.695-14.261,47.256 c-0.115,0.257-0.273,0.49-0.464,0.692C141.792,156.935,115.613,171.987,85.996,171.989z M83.079,166.872 c0.483,0.04,0.968,0.069,1.455,0.089c4.753-0.512,9.843-8.871,13.709-22.584c0.851-3.017,1.627-6.228,2.328-9.605l-32.919-0.047 c0.69,3.38,1.458,6.593,2.3,9.612C73.64,157.563,78.48,165.821,83.079,166.872z M105.671,134.779 c-0.777,3.866-1.65,7.529-2.615,10.954c-2.558,9.073-5.596,15.887-9.011,20.295c13.778-3.291,25.815-14.827,33.902-31.217 L105.671,134.779z M43.905,134.69c7.113,14.521,17.33,25.252,29.125,29.84c-2.972-4.405-5.629-10.724-7.895-18.851 c-0.955-3.427-1.818-7.095-2.583-10.962L43.905,134.69z M133.394,134.819c-5.463,11.753-12.836,21.39-21.441,27.904 c15.499-5.258,28.908-15.089,38.609-27.88L133.394,134.819z M21.29,134.658c9.665,12.818,23.043,22.688,38.526,27.99 c-8.586-6.539-15.93-16.196-21.36-27.966L21.29,134.658z M135.551,129.822l18.513,0.026c7.732-11.96,12.399-26.078,12.883-41.237 l-23.325-0.033C143.311,103.605,140.405,117.675,135.551,129.822z M106.602,129.78l23.624,0.034 c5.033-11.964,8.074-26.084,8.396-41.243l-28.545-0.041C109.935,103.286,108.733,117.408,106.602,129.78z M66.707,129.724 l34.822,0.05c2.176-12.285,3.404-26.427,3.547-41.251l-41.798-0.06C63.379,103.287,64.567,117.432,66.707,129.724z M41.641,129.688 l19.994,0.028c-2.096-12.38-3.257-26.503-3.356-41.26L33.362,88.42C33.641,103.58,36.642,117.709,41.641,129.688z M17.803,129.653 l18.512,0.026c-4.819-12.161-7.685-26.238-7.953-41.267L5.037,88.38C5.477,103.54,10.104,117.671,17.803,129.653z M143.63,83.578 l23.325,0.033c-0.411-14.333-4.53-28.034-11.902-39.996l-18.809-0.026C140.829,55.689,143.38,69.347,143.63,83.578z M110.084,83.53 l28.545,0.041c-0.261-14.336-2.944-28.028-7.752-39.99l-23.938-0.034C108.902,55.616,109.988,69.279,110.084,83.53z M63.286,83.463 l41.798,0.06c-0.097-14.313-1.208-27.993-3.211-39.983l-35.261-0.051C64.574,55.473,63.424,69.15,63.286,83.463z M33.37,83.42 l24.916,0.036c0.136-14.251,1.262-27.911,3.259-39.975l-20.309-0.029C36.393,55.4,33.671,69.085,33.37,83.42z M5.043,83.38 l23.325,0.033c0.29-14.23,2.881-27.881,7.501-39.969l-18.809-0.026C9.654,55.358,5.496,69.047,5.043,83.38z M134.192,38.586 l17.512,0.024c-2.5-3.45-5.289-6.729-8.355-9.804c-8.871-8.896-19.445-15.478-30.991-19.438c5.423,4.141,10.419,9.602,14.811,16.269 C129.81,29.649,132.157,33.986,134.192,38.586z M106.058,38.545l22.635,0.033c-1.698-3.594-3.602-7.002-5.701-10.19 c-7.945-12.065-17.931-19.795-28.718-22.402c3.402,4.419,6.421,11.241,8.953,20.321C104.287,30.109,105.233,34.205,106.058,38.545z M67.533,38.49l33.433,0.048c-0.755-3.85-1.608-7.491-2.555-10.889C94.585,13.931,89.52,5.559,84.77,5.027 c-0.488,0.018-0.976,0.046-1.462,0.085c-4.602,1.041-9.463,9.284-13.188,22.497C69.163,31.003,68.299,34.643,67.533,38.49z M43.434,38.455l19.006,0.027c0.838-4.338,1.795-8.431,2.866-12.229c2.29-8.123,4.965-14.435,7.951-18.831 c-8.994,3.466-17.282,10.582-24.093,20.86C47.056,31.464,45.142,34.867,43.434,38.455z M20.424,38.423l17.512,0.024 c2.048-4.594,4.407-8.923,7.061-12.927c4.411-6.656,9.422-12.102,14.857-16.228c-11.556,3.928-22.15,10.479-31.046,19.35 C25.732,31.709,22.933,34.979,20.424,38.423z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/useunicaoficial">
+                  <svg
+                    class="insta"
+                    fill="#ffffff"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g id="Instagram">
+                        <g>
+                          <path
+                            d="M18.437,20.937H5.563a2.5,2.5,0,0,1-2.5-2.5V5.563a2.5,2.5,0,0,1,2.5-2.5H18.437a2.5,2.5,0,0,1,2.5,2.5V18.437A2.5,2.5,0,0,1,18.437,20.937ZM5.563,4.063a1.5,1.5,0,0,0-1.5,1.5V18.437a1.5,1.5,0,0,0,1.5,1.5H18.437a1.5,1.5,0,0,0,1.5-1.5V5.563a1.5,1.5,0,0,0-1.5-1.5Z"
+                          ></path>
+                          <path
+                            d="M12,16.594A4.595,4.595,0,1,1,16.6,12,4.6,4.6,0,0,1,12,16.594ZM12,8.4A3.595,3.595,0,1,0,15.6,12,3.6,3.6,0,0,0,12,8.4Z"
+                          ></path>
+                          <circle cx="17.2" cy="6.83" r="1.075"></circle>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section id="fixed-buttons">
+          <a href="https://api.whatsapp.com/send/?phone=%2B5511942498914&text=Oi%2C+vim+da+loja+online+da+Unica.+Quero+saber+mais+sobre+roupas+para+o+setor+de+beleza%21&type=phone_number&app_absent=0" class="whatsapp-float wpp-default" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="Whatsapp" aria-hidden="true">
+          </a>
+          <a href="#" class="scroll-top" aria-label="Voltar ao topo" style="opacity: 0; pointer-events: none;">
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <path d="M12 4l-8 8h6v8h4v-8h6l-8-8z" fill="currentColor"></path>
+              </svg>
+          </a>
+        </section>
+      </footer>
+      <section>
+          <div class="madeBy">
+            <p>Feito por:</p>
+            <a href="https://nexgenius.com.br">
+              <img src="https://nexgenius.com.br/wp-content/uploads/2021/03/Nexgenius-350px.png" alt="Nexgenius">
+            </a>
+          </div>
+        </section>
+      <script>
+        //  Carrossel TECH
+        document
+          .querySelectorAll(".tech-highlight-carousel")
+          .forEach((carousel) => {
+            const track = carousel.querySelector(".carousel-track");
+            let items = carousel.querySelectorAll(".tech-feature-item");
+            const visibleItems = 3;
+            let index = visibleItems;
+            let interval;
+
+            // Clonar início/fim
+            for (let i = 0; i < visibleItems; i++) {
+              const cloneFirst = items[i].cloneNode(true);
+              const cloneLast = items[items.length - 1 - i].cloneNode(true);
+              track.appendChild(cloneFirst);
+              track.insertBefore(cloneLast, track.firstChild);
+            }
+
+            // Atualizar lista após clones
+            items = carousel.querySelectorAll(".tech-feature-item");
+
+            function updateCarousel(animate = true) {
+              const activeItem = items[index];
+              const itemCenter =
+                activeItem.offsetLeft + activeItem.offsetWidth / 2;
+              const containerCenter = carousel.offsetWidth / 2;
+              const offset = itemCenter - containerCenter;
+
+              if (!animate) {
+                track.style.transition = "none";
+              } else {
+                track.style.transition = "transform 0.5s ease";
+              }
+
+              track.style.transform = `translateX(-${offset}px)`;
+
+              items.forEach((item, i) => {
+                item.classList.toggle("active", i === index);
+              });
+            }
+
+            function nextSlide() {
+              index++;
+              updateCarousel();
+
+              if (index >= items.length - visibleItems) {
+                setTimeout(() => {
+                  index = visibleItems;
+                  updateCarousel(false);
+                }, 500);
+              }
+            }
+
+            function startCarousel() {
+              interval = setInterval(nextSlide, 2500);
+            }
+
+            function stopCarousel() {
+              clearInterval(interval);
+            }
+
+            window.addEventListener("resize", () => updateCarousel(false));
+
+            // Inicialização
+            setTimeout(() => {
+              updateCarousel(false);
+              startCarousel();
+            }, 100);
+          });
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const clickTargetMap = {
+            scrollToAbout: ".about-title",
+            scrollToTech: ".tech-main-title",
+            scrollToUnique: ".unique-title",
+            scrollToWhy: ".why-title",
+            scrollToTestimonial: ".testimonials-main-title",
+            scrollToDiscover: ".discover-title",
+          };
+
+          const spyTargetMap = {
+            scrollToAbout: ".about-section-background",
+            scrollToTech: ".tech-section-background",
+            scrollToUnique: ".unique-section-background",
+            scrollToWhy: ".why-section-background",
+            scrollToTestimonial: ".testimonials-section",
+            scrollToDiscover: ".discover-section",
+          };
+
+          const buttons = {};
+          const spySections = [];
+
+          // Função para fechar menu mobile
+          function closeMenuPanel() {
+            document.getElementById("menuPanel")?.classList.remove("show");
+          }
+
+          // Scroll suave + armazena todos os botões com mesmo ID
+          Object.entries(clickTargetMap).forEach(
+            ([buttonId, targetSelector]) => {
+              const allButtons = document.querySelectorAll(`#${buttonId}`);
+              const target = document.querySelector(targetSelector);
+
+              if (target) {
+                allButtons.forEach((button) => {
+                  if (!buttons[buttonId]) {
+                    buttons[buttonId] = [];
+                  }
+                  buttons[buttonId].push(button);
+
+                  button.addEventListener("click", () => {
+                    const offset = 100;
+                    const top =
+                      target.getBoundingClientRect().top +
+                      window.scrollY -
+                      offset;
+                    window.scrollTo({ top, behavior: "smooth" });
+                    closeMenuPanel(); // fecha menu lateral se necessário
+                  });
+                });
+              }
+            }
+          );
+
+          // Scroll spy: prepara as seções observadas
+          Object.entries(spyTargetMap).forEach(
+            ([buttonId, sectionSelector]) => {
+              const section = document.querySelector(sectionSelector);
+              if (section && buttons[buttonId]) {
+                spySections.push({ id: buttonId, element: section });
+              }
+            }
+          );
+
+          // Aplica scroll spy dinamicamente com base no scroll
+          window.addEventListener("scroll", () => {
+            const scrollPos = window.scrollY + 30;
+            let currentId = null;
+
+            for (let i = 0; i < spySections.length; i++) {
+              const { id, element } = spySections[i];
+              const offsetTop = element.offsetTop;
+              const offsetHeight = element.offsetHeight;
+
+              if (
+                scrollPos >= offsetTop &&
+                scrollPos < offsetTop + offsetHeight
+              ) {
+                currentId = id;
+                break;
+              }
+            }
+
+            Object.entries(buttons).forEach(([id, buttonList]) => {
+              buttonList.forEach((button) => {
+                if (id === currentId) {
+                  button.classList.add("active");
+                } else {
+                  button.classList.remove("active");
+                }
+              });
+            });
+          });
+
+          // Menu lateral (hamburger)
+          const hamburger = document.getElementById("hamburger");
+          const menuPanel = document.getElementById("menuPanel");
+          const closeBtn = document.getElementById("closeBtn");
+
+          hamburger?.addEventListener("click", () => {
+            menuPanel?.classList.toggle("show");
+          });
+
+          closeBtn?.addEventListener("click", () => {
+            closeMenuPanel();
+          });
+
+          document.addEventListener("click", (e) => {
+            const isClickInside = menuPanel?.contains(e.target);
+            const isClickHamburger = hamburger?.contains(e.target);
+            if (!isClickInside && !isClickHamburger) {
+              closeMenuPanel();
+            }
+          });
+        });
+
+        const video = document.getElementById('depoimentoVideo');
+        const muteIcon = document.getElementById('muteIcon');
+        const muteStatus = document.getElementById('muteStatus');
+
+        muteIcon.addEventListener('click', () => {
+          video.muted = !video.muted;
+          muteStatus.textContent = video.muted ? '🔇' : '🔊';
+        });
+
+        // Atualiza o ícone se o vídeo for mutado/desmutado de outra forma
+        video.addEventListener('volumechange', () => {
+          muteStatus.textContent = video.muted ? '🔇' : '🔊';
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+          // Para cada seção independente
+          document.querySelectorAll('.product-images-flex-inside').forEach(section => {
+            const mainImg       = section.querySelector('.product-image-active');
+            const descParagraph = section.querySelector('.image-description-left p');
+            const thumbs        = section.querySelectorAll('.product-images img');
+
+            thumbs.forEach(thumb => {
+              // Guarda a descrição inicial no data-attribute, se precisar
+              if (descParagraph && !thumb.dataset.description) {
+                thumb.dataset.description = descParagraph.textContent;
+              }
+
+              function swapImages() {
+                // troca src e alt entre main e thumb
+                const tmpSrc = mainImg.src;
+                const tmpAlt = mainImg.alt;
+                mainImg.src = thumb.src;
+                mainImg.alt = thumb.alt;
+                thumb.src = tmpSrc;
+                thumb.alt = tmpAlt;
+              }
+
+              function swapDescription() {
+                if (!descParagraph) return;
+                // lê descrições
+                const tmpDesc   = descParagraph.textContent;
+                const thumbDesc = thumb.dataset.description;
+                // faz o swap
+                descParagraph.textContent = thumbDesc;
+                thumb.dataset.description = tmpDesc;
+              }
+
+              // Apenas no click
+              thumb.addEventListener('click', () => {
+                swapImages();
+                swapDescription();
+              });
+            });
+          });
+        });
+      </script>
+    </body>
+  </head>
+</html>
